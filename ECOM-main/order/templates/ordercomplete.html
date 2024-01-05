@@ -1,0 +1,69 @@
+{% load static %}
+{% load i18n %}
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	<title>ordercomplete</title>
+	<link rel="stylesheet" href="{% static 'ordercomlete/bootstrap.min.css'%}">
+	<link rel="stylesheet" href="{% static 'ordercomlete/fontawesome.css'%}">
+	<link rel="stylesheet" href="{% static 'ordercomlete/style.css'%}">
+
+</head>
+<body>
+<div class="container mt-5 mb-5">
+		<div class="d-flex justify-content-center row">
+			<div class="col-md-10">
+                <div class="receipt bg-white p-3 rounded"><a href="{% url 'home'%}"><img src="{% static 'assets/images/logo.svg'%}" width="120"></a>
+					<h4 class="mt-2 mb-3">{% trans 'Your order is confirmed!'%}</h4>
+					<h6 class="name">{{ user.first_name }} {{ user.last_name }}</h6><span class="fs-12 text-black-50">{% trans 'your order has been confirmed and will be shipped in two days'%}</span>
+					<hr>
+					<div class="d-flex flex-row justify-content-between align-items-center order-details">
+                        <div><span class="d-block fs-12">{% trans 'Address'%}</span><span class="font-weight-bold">{{ profile.address }}</span></div>
+						<div><span class="d-block fs-12">{% trans 'Order number'%}</span><span class="font-weight-bold">{{ ordercode }}</span></div>
+						<div><span class="d-block fs-12">{% trans 'City'%}</span><span class="font-weight-bold">{{ profile.city }}</span><img class="ml-1 mb-1" src="" width="20"></div>
+						<div><span class="d-block fs-12">{% trans 'Country'%}</span><span class="font-weight-bold text-success">{{ profile.country }}</span></div>
+					</div>
+					<hr>
+                    {% for rs in shopcart %}
+					<div class="d-flex justify-content-between align-items-center product-details">
+
+						<div class="d-flex flex-row product-name-image"><img class="rounded" src="{{ rs.product.image.url }}" width="80">
+							<div class="d-flex flex-column justify-content-between ml-2">
+								<div><span class="d-block font-weight-bold p-name">{{ rs.product.title }}</span><span class="fs-12"></span></div><span class="fs-12">x {{ rs.quantity }}</span>
+							</div>
+						</div>
+						<div class="product-price">
+							<h5>{{ rs.amount }} sum</h5>
+						</div>
+					</div>
+                    {% endfor %}
+                    <div class="mt-5 amount row">
+						<div class="d-flex justify-content-center col-md-6"></div>
+						<div class="col-md-6">
+							<div class="billing">
+
+								<div class="d-flex justify-content-between mt-2"><span class="text-success">{% trans 'Subtotal'%}</span><span class="font-weight-bold text-success">X {{ total_quantity }}</span></div>
+								<hr>
+								<div class="d-flex justify-content-between mt-1"><span class="font-weight-bold">{% trans 'Total'%}</span><span class="font-weight-bold text-success">{{ total }} sum</span></div>
+							</div>
+						</div>
+					</div><span class="d-block">Expected delivery date</span><span class="font-weight-bold text-success">{{ profile }}</span><span class="d-block mt-3 text-black-50 fs-15">We will be sending a shipping confirmation email when the item is shipped!</span>
+					<hr>
+					<div class="d-flex justify-content-between align-items-center footer">
+
+						<div class="thanks"><span class="d-block font-weight-bold">Thanks for shopping</span><span>Belle team</span></div>
+
+						<div class="d-flex flex-column justify-content-end align-items-end"><span class="d-block font-weight-bold"></span><span></span></div>
+                    </div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+	<script src="{% static 'ordercomlete/bootstrap.bundle.js'%}"></script>
+	<script src="{% static 'ordercomlete/jquery.js'%}"></script>
+</body>
+</html>

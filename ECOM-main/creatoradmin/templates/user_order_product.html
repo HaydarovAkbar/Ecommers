@@ -1,0 +1,535 @@
+{% load static %}
+{% load i18n %}
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<!-- belle/cart-variant1.html   11 Nov 2019 12:44:31 GMT -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>Cart Page &ndash; Belle Multipurpose Bootstrap 4 Template</title>
+<meta name="description" content="description">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Favicon -->
+<link rel="shortcut icon" href="{% static 'assets/images/favicon.png'%}" />
+<!-- Plugins CSS -->
+<link rel="stylesheet" href="{% static 'assets/css/plugins.css'%}">
+<!-- Bootstap CSS -->
+<link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css'%}">
+<!-- Main Style CSS -->
+<link rel="stylesheet" href="{% static 'assets/css/style.css'%}">
+<link rel="stylesheet" href="{% static 'assets/css/responsive.css'%}">
+<link href="{% static 'statice/fontawesome/css/all.css'%}" rel="stylesheet">
+
+</head>
+<body class="page-template belle cart-variant1">
+<div id="pre-loader">
+    <img src="{% static 'assets/images/loader.gif'%}" alt="Loading..." />
+</div>
+<div class="pageWrapper">
+	<!--Search Form Drawer-->
+	<div class="search">
+        <div class="search__form">
+            <script>
+                $(function()
+                         {$("#query").autocomplete({
+                          source: "/search_autoo/",
+                          select: function (event, ui) { //item selected
+                          AutoCompleteSelectHandler(event, ui)
+                           },
+                          minLength: 2,
+                             });
+                         });
+
+                          function AutoCompleteSelectHandler(event, ui)
+                         {
+                            var selectedObj = ui.item;
+                         }
+            </script>
+            <form action="{% url 'searchs'%}" method="post">
+                                {% csrf_token %}
+                                <select name="catid" class="input search-categories" style="background-color: #D5D5D5;  border: none; ">
+								<option value="0">{% trans 'Categories'%}</option>
+
+                                {% for rs in category %}
+                                {% if rs.is_leaf_node %}
+                                <option value="{{ rs.id }}">{{ rs.title }}</option>
+                                {% endif %}
+                                {% if not rs.is_leaf_rs %}
+
+                                {{ children }}
+
+                                {% endif %}
+                                {% endfor %}
+                                </select>
+                                <input id="query" name="query" type="text" placeholder="Search product..."  class="input search-categories" />
+{#                                <button type="submit"></button>#}
+                </form>
+            <button type="button" class="search-trigger close-btn"><i class="anm anm-times-l"></i></button>
+        </div>
+    </div>
+    <!--End Search Form Drawer-->
+    <!--Top Header-->
+    <div class="top-header">
+        <div class="container-fluid">
+            <div class="row">
+            	<div class="col-10 col-sm-8 col-md-5 col-lg-4">
+                    <form class="form-inline" action="{% url 'selectlanguage' %}"method="post">
+                        {% csrf_token %}
+                          <input name="next" type="hidden" value="{{ redirect_to }}">
+                            <select name="language" onchange="submit()" style="border: none; width: 120px; height: 30px; background-color: black;">
+
+                                {% get_current_language as LANGUAGE_CODE %}
+                                {% get_available_languages as LANGUAGES %}
+                                {% get_language_info_list for LANGUAGES as languages %}
+                                {% for language in languages %}
+                                    <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected{% endif %}>
+                                        {{ language.name_local }} ({{ language.code }})
+                                    </option>
+                                {% endfor %}
+                            </select>
+                            <noscript>
+                                <input type="submit" value="Set" />
+                            </noscript>
+                        </form>
+                    <p class="phone-no"><i class="anm anm-phone-s"></i> +440 0(111) 044 833</p>
+                </div>
+                <div class="col-sm-4 col-md-4 col-lg-4 d-none d-lg-none d-md-block d-lg-block">
+                	<div class="text-center"><p class="top-header_middle-text">{% trans 'Worldwide Express Shipping'%}</p></div>
+                </div>
+                <div class="col-2 col-sm-4 col-md-3 col-lg-4 text-right">
+                	<span class="user-menu d-block d-lg-none"><i class="anm anm-user-al" aria-hidden="true"></i></span>
+                    <ul class="customer-links list-inline">
+                        <li><a href="{% url 'login_form'%}">{% trans 'Login'%}</a></li>
+                        <li><a href="{% url 'register'%}">{% trans 'Create Account'%}</a></li>
+                        {% if user.id is not None %}
+                        <li><a href="{% url 'developer_home'%}">{% trans 'My account'%}</a></li>
+                        {% else %}
+                        {% endif %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End Top Header-->
+    <!--Header-->
+    <div class="header-wrap classicHeader animated d-flex">
+    	<div class="container-fluid">
+            <div class="row align-items-center">
+            	<!--Desktop Logo-->
+                <div class="logo col-md-2 col-lg-2 d-none d-lg-block">
+                    <a href="{% url 'home'%}">
+                    	<img src="{% static 'assets/images/logo.svg'%}" alt="Belle Multipurpose Html Template" title="Belle Multipurpose Html Template" />
+                    </a>
+                </div>
+                <!--End Desktop Logo-->
+                <div class="col-2 col-sm-3 col-md-3 col-lg-8">
+                	<div class="d-block d-lg-none">
+                        <button type="button" class="btn--link site-header__menu js-mobile-nav-toggle mobile-nav--open">
+                        	<i class="icon anm anm-times-l"></i>
+                            <i class="anm anm-bars-r"></i>
+                        </button>
+                    </div>
+                	<!--Desktop Menu-->
+                	<nav class="grid__item" id="AccessibleNav"><!-- for mobile -->
+                        <ul id="siteNav" class="site-nav medium center hidearrow">
+                            <li class="lvl1 parent megamenu"><a href="{% url 'home'%}">{% trans 'Home'%} <i class="anm anm-angle-down-l"></i></a></li>
+                            <li class="lvl1 parent megamenu"><a href="">{% trans 'Shop'%}<i class="anm anm-angle-down-l"></i></a>
+                            	<div class="megamenu style4">
+                                    <ul class="grid grid--uniform mmWrapper">
+
+                                    	<li class="grid__item lvl-1 col-md-3 col-lg-3"><a href="#" class="site-nav lvl-1">{% trans 'Categories'%}</a>
+                                            <ul class="subLinks">
+                                                {% for rs in category %}
+                                                <li class="lvl-2"><a href="{% url 'category_product' rs.id rs.slug %}" class="site-nav lvl-2">{{ rs.title }}</a></li>
+
+                                                {% endfor %}
+                                            </ul>
+                                      	</li>
+                                      	<li class="grid__item lvl-1 col-md-3 col-lg-3"><a href="#" class="site-nav lvl-1"></a>
+                                            <ul class="subLinks">
+                                                <li class="lvl-2"><a href="" class="site-nav lvl-2"><span class="lbl nm_label3">{% trans 'Hot'%}</span></a></li>
+                                                <li class="lvl-2"><a href="" class="site-nav lvl-2"><span class="lbl nm_label3">{% trans 'Hot'%}</span></a></li>
+                                                <li class="lvl-2"><a href="" class="site-nav lvl-2"><span class="lbl nm_label3">{% trans 'Hot'%}</span></a></li>
+                                                <li class="lvl-2"><a href="" class="site-nav lvl-2"><span class="lbl nm_label3">{% trans 'Hot'%}</span></a></li>
+                                                <li class="lvl-2"><a href="" class="site-nav lvl-2"><span class="lbl nm_label3">{% trans 'Hot'%}</span></a></li>
+                                                <li class="lvl-2"><a href="" class="site-nav lvl-2"><span class="lbl nm_label3">{% trans 'Hot'%}</span></a></li>
+                                                <li class="lvl-2"><a href="" class="site-nav lvl-2"><span class="lbl nm_label3">{% trans 'Hot'%}</span></a></li>
+                                                <li class="lvl-2"><a href="" class="site-nav lvl-2"><span class="lbl nm_label3">{% trans 'Hot'%}</span></a></li>
+                                            </ul>
+                                      	</li>
+                                        <li class="grid__item lvl-1 col-md-6 col-lg-6">
+                                        	<a href="#"><img src="{% static 'assets/images/megamenu-bg1.jpg'%}" alt="" title="" /></a>
+                                        </li>
+                                    </ul>
+                              	</div>
+                            </li>
+                            </li>
+                        <li class="lvl1 parent megamenu"><a href="{% url 'home'%}">{% trans 'Aboutus'%}<i class="anm anm-angle-down-l"></i></a>
+
+                        </li>
+                        <li class="lvl1 parent dropdown"><a href="{% url 'contactus'%}">{% trans 'Contact'%} <i class="anm anm-angle-down-l"></i></a>
+
+                        </li>
+                        <li class="lvl1 parent dropdown"><a href="{% url 'faq'%}">{% trans 'FAQ'%}<i class="anm anm-angle-down-l"></i></a>
+
+                        </li>
+
+                      </ul>
+                    </nav>
+                    <!--End Desktop Menu-->
+                </div>
+                <!--Mobile Logo-->
+                <div class="col-6 col-sm-6 col-md-6 col-lg-2 d-block d-lg-none mobile-logo">
+                	<div class="logo">
+                        <a href="index.html">
+                            <img src="{% static 'assets/images/logo.svg'%}" alt="Belle Multipurpose Html Template" title="Belle Multipurpose Html Template" />
+                        </a>
+                    </div>
+                </div>
+                <!--Mobile Logo-->
+                <div class="col-4 col-sm-3 col-md-3 col-lg-2">
+                	<div class="site-cart">
+                    	<a href="#;" class="site-header__cart" title="Cart">
+                        	<i class="icon anm anm-bag-l"></i>
+                            {% for rs in shopcart %}
+                            <span id="CartCount" class="site-header__cart-count" data-cart-render="item_count">{{ total_qty }}</span>
+                            {% endfor %}
+                        </a>
+                        <!--Minicart Popup-->
+
+
+                        <div id="header-cart" class="block block-cart">
+                        	<ul class="mini-products-list">
+                                {% for rs in shopcart %}
+                                <li class="item">
+                                	<a class="product-image" href="#">
+                                    	<img src="{{ rs.product.image.url }}" alt="3/4 Sleeve Kimono Dress" title="" />
+                                    </a>
+                                    <div class="product-details">
+                                    	<a href="/order/deletefromcart/{{ rs.id }}" onclick="return confirm('{% trans 'Delete! Are you sure?'%}')" class="remove"><i class="anm anm-times-l" aria-hidden="true"></i></a>
+                                        <a href="#" class="edit-i remove"><i class="anm anm-edit" aria-hidden="true"></i></a>
+                                        <a class="pName" href="cart.html">{{ rs.product.title }}</a>
+                                        <div class="variant-cart"></div>
+                                        <div class="wrapQtyBtn">
+                                            <div class="qtyField">
+                                            	<span class="label">Sum = {{ rs.product.price }}</span>
+
+
+                                            </div>
+                                        </div>
+                                        <div class="priceRow">
+                                        	<div class="product-price">
+                                            	<span class="money">{{ rs.quantity }} x = {{ rs.amount }}</span>
+                                            </div>
+                                         </div>
+									</div>
+                                </li>
+                                {% endfor %}
+                            </ul>
+                            <div class="total">
+                            	<div class="total-in">
+                                    <span class="label">Cart Subtotal:</span><span class="product-price"><span class="money">Sum = {{ total }}</span></span>
+                                </div>
+                                 <div class="buttonSet text-center">
+                                    <a href="{% url 'shopcart'%}" class="btn btn-secondary btn--small">{% trans 'View Cart'%}</a>
+                                    <a href="{% url 'orderproduct'%}" class="btn btn-secondary btn--small">{% trans 'Checkout'%}</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="site-header__search">
+                    	<button type="button" class="search-trigger"><i class="icon anm anm-search-l"></i></button>
+                    </div>
+                </div>
+        	</div>
+        </div>
+    </div>
+    <!--End Header-->
+    <!--Mobile Menu-->
+    <div class="mobile-nav-wrapper" role="navigation">
+		<div class="closemobileMenu"><i class="icon anm anm-times-l pull-right"></i> Close Menu</div>
+        <ul id="MobileNav" class="mobile-nav">
+        	<li class="lvl1 parent megamenu"><a href="{% url 'home'%}">{% trans 'Home'%} <i class="anm anm-plus-l"></i></a></li>
+        	<li class="lvl1 parent megamenu"><a href="#">{% trans 'Shop'%} <i class="anm anm-plus-l"></i></a>
+          <ul>
+            <li><a href="#" class="site-nav">{% trans 'Category'%}<i class="anm anm-plus-l"></i></a>
+              <ul>
+                  {% for rs in category %}
+                <li><a href="{% url 'category_delate' rs.id rs.slug %}" class="site-nav">{{ rs.title }}</a></li>
+                  {% endfor %}
+              </ul>
+            </li>
+
+          </ul>
+        </li>
+        	<li class="lvl1 parent megamenu"><a href="{% url 'contactus'%}">{% trans 'Contact'%} <i class="anm anm-plus-l"></i></a></li>
+            <li class="lvl1 parent megamenu"><a href="{% url 'home'%}">{% trans 'Aboutus'%} <i class="anm anm-plus-l"></i></a></li>
+            <li class="lvl1 parent megamenu"><a href="{% url 'faq'%}">{% trans 'FAQ'%} <i class="anm anm-plus-l"></i></a></li>
+            <li class="lvl1 parent megamenu"><a href="{% url 'shopcart'%}">{% trans 'Shopcart'%} <i class="anm anm-plus-l"></i></a></li>
+            <li class="lvl1 parent megamenu"><a href="{% url 'developer_home'%}">{% trans 'My akkount'%}<i class="anm anm-plus-l"></i></a></li>
+            </li>
+      </ul>
+	</div>
+
+
+
+<!--Body Content-->
+    <div id="page-content">
+    	<!--Page Title-->
+    	<div class="page section-header text-center">
+			<div class="page-title">
+        		<div class="wrapper"><h1 class="page-width"></h1></div>
+      		</div>
+		</div>
+        <!--End Page Title-->
+
+        <div class="container">
+        	<div class="row">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 main-col">
+                	<div class="alert alert-success text-uppercase" role="alert">
+						<i class="icon anm anm-truck-l icon-large"></i> &nbsp;<strong>{% trans 'Congratulations!'%}</strong> {% trans "You've got free shipping!"%}
+					</div>
+                	<form action="#" method="post" class="cart style2">
+                		<table>
+                            <thead class="cart__row cart__header">
+                                <tr>
+                                    <th colspan="2" class="text-center">{% trans 'Product'%}</th>
+                                    <th class="text-center">{% trans 'Total'%}</th>
+                                    <th class="text-center">{% trans 'STATUS'%}</th>
+                                    <th class="text-right">{% trans 'CREAT'%}</th>
+                                    <th class="action">{% trans 'LINK'%}</th>
+                                </tr>
+                            </thead>
+                    		<tbody>
+                                {% for rs in order_product %}
+                                <tr class="cart__row border-bottom line1 cart-flex border-top">
+                                    <td class="cart__image-wrapper cart-flex-item">
+                                        <a href="#"><img class="cart__image" src="{{ rs.product.image.url }}" alt=""></a>
+                                    </td>
+                                    <td class="cart__meta small--text-left cart-flex-item">
+                                        <div class="list-view-item__title">
+
+                                            <a href="/user/order_product_detail/{{ rs.id }}/{{ rs.order.id}}">{{ rs.product}}</a>
+                                        </div>
+
+                                        <div class="cart__meta-text">
+{#                                            Color: Navy<br>Size: Small<br>#}
+                                        </div>
+                                    </td>
+                                    <td class="cart__price-wrapper cart-flex-item">
+                                        <span class="money">{{ rs.amount }} so'm</span>
+                                    </td>
+                                    <td class="cart__update-wrapper cart-flex-item text-right">
+                                        <div class="cart__qty text-center">
+                                            <div class="qtyField">
+                                                {{ rs.status }}
+{#                                                <a class="qtyBtn minus" href="javascript:void(0);"><i class="icon icon-minus"></i></a>#}
+{#                                                <input class="cart__qty-input qty" type="number" name="updates[]" id="qty" value="1" pattern="[0-9]*">#}
+{#                                                <a class="qtyBtn plus" href="javascript:void(0);"><i class="icon icon-plus"></i></a>#}
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="text-right small--hide cart-price">
+                                        <div><span class="money">{{ rs.create_at }}</span></div>
+                                    </td>
+                                    <td class="text-center small--hide"><a href="/user/order_product_detail/{{ rs.id }}/{{ rs.order.id}}" class="btn btn--secondary cart__remove" title="open link !"><i class="fas fa-external-link-alt"></i></a></td>
+                                </tr>
+
+                                {% endfor %}
+                            </tbody>
+                    		<tfoot>
+{#                                <tr>#}
+{#                                    <td colspan="3" class="text-left"><a href="http://annimexweb.com/" class="btn btn-secondary btn--small cart-continue">Continue shopping</a></td>#}
+{#                                    <td colspan="3" class="text-right">#}
+{#	                                    <button type="submit" name="clear" class="btn btn-secondary btn--small  small--hide">Clear Cart</button>#}
+{#                                    	<button type="submit" name="update" class="btn btn-secondary btn--small cart-continue ml-2">Update Cart</button>#}
+{#                                    </td>#}
+{#                                </tr>#}
+                            </tfoot>
+                    </table>
+                    </form>
+               	</div>
+
+
+                <div class="container mt-4">
+                    <div class="row">
+                    	<div class="col-12 col-sm-12 col-md-4 col-lg-4 mb-4">
+{#                        	<h5>Discount Codes</h5>#}
+                            <form action="#" method="post">
+                            	<div class="form-group">
+{#                                    <label for="address_zip">Enter your coupon code if you have one.</label>#}
+{#                                    <input type="text" name="coupon">#}
+                                </div>
+{#                                <div class="actionRow">#}
+{#                                    <div><input type="button" class="btn btn-secondary btn--small" value="Apply Coupon"></div>#}
+{#                                </div>#}
+                            </form>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-4 col-lg-4 mb-4">
+{#                        	<h5>Estimate Shipping and Tax</h5>#}
+							<form action="#" method="post">
+                                <div class="form-group">
+{#                                    <label for="address_country">Country</label>#}
+{#                                    <select id="address_country" name="address[country]" data-default="United States"><option value="Belgium" data-provinces="[]">Belgium</option>#}
+{#                                        <option value="---" data-provinces="[]">---</option>#}
+{#                                        <option value="Afghanistan" data-provinces="[]">Afghanistan</option>#}
+{##}
+{#                                        <option value="Zimbabwe" data-provinces="[]">Zimbabwe</option></select>#}
+                                </div>
+
+                                <div class="form-group">
+{#                                    <label>State</label>#}
+{#                                    <select id="address_province" name="address[province]" data-default="">#}
+{#                                      <option value="Alabama">Alabama</option>#}
+{#                                      <option value="Alaska">Alaska</option>#}
+
+                                    </select>
+                                </div>
+                                <div class="form-group">
+{#                                    <label for="address_zip">Postal/Zip Code</label>#}
+{#                                    <input type="text" id="address_zip" name="address[zip]">#}
+                                </div>
+
+                                <div class="actionRow">
+{#                                    <div><input type="button" class="btn btn-secondary btn--small" value="Calculate shipping"></div>#}
+                                </div>
+                            </form>
+                        </div>
+
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <!--End Body Content-->
+<footer id="footer">
+        <div class="newsletter-section">
+            <div class="container">
+                <div class="row">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-7 w-100 d-flex justify-content-start align-items-center">
+                            <div class="display-table">
+                                <div class="display-table-cell footer-newsletter">
+                                    <div class="section-header text-center">
+                                        <label class="h2"><span>sign up for </span>newsletter</label>
+                                    </div>
+                                    <form action="#" method="post">
+                                        <div class="input-group">
+                                            <input type="email" class="input-group__field newsletter__input" name="EMAIL" value="" placeholder="Email address" required="">
+                                            <span class="input-group__btn">
+                                                <button type="submit" class="btn newsletter__submit" name="commit" id="Subscribe"><span class="newsletter__submit-text--large">Subscribe</span></button>
+                                            </span>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-5 d-flex justify-content-end align-items-center">
+                            <div class="footer-social">
+                                <ul class="list--inline site-footer__social-icons social-icons">
+                                    <li><a class="social-icons__link" href="#" target="_blank" title="Belle Multipurpose Bootstrap 4 Template on Facebook"><i class="icon icon-facebook"></i></a></li>
+                                    <li><a class="social-icons__link" href="#" target="_blank" title="Belle Multipurpose Bootstrap 4 Template on Twitter"><i class="icon icon-twitter"></i> <span class="icon__fallback-text">Twitter</span></a></li>
+                                    <li><a class="social-icons__link" href="#" target="_blank" title="Belle Multipurpose Bootstrap 4 Template on Pinterest"><i class="icon icon-pinterest"></i> <span class="icon__fallback-text">Pinterest</span></a></li>
+                                    <li><a class="social-icons__link" href="#" target="_blank" title="Belle Multipurpose Bootstrap 4 Template on Instagram"><i class="icon icon-instagram"></i> <span class="icon__fallback-text">Instagram</span></a></li>
+                                    <li><a class="social-icons__link" href="#" target="_blank" title="Belle Multipurpose Bootstrap 4 Template on Tumblr"><i class="icon icon-tumblr-alt"></i> <span class="icon__fallback-text">Tumblr</span></a></li>
+                                    <li><a class="social-icons__link" href="#" target="_blank" title="Belle Multipurpose Bootstrap 4 Template on YouTube"><i class="icon icon-youtube"></i> <span class="icon__fallback-text">YouTube</span></a></li>
+                                    <li><a class="social-icons__link" href="#" target="_blank" title="Belle Multipurpose Bootstrap 4 Template on Vimeo"><i class="icon icon-vimeo-alt"></i> <span class="icon__fallback-text">Vimeo</span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        <div class="site-footer">
+        	<div class="container">
+     			<!--Footer Links-->
+            	<div class="footer-top">
+                	<div class="row">
+                    	<div class="col-12 col-sm-12 col-md-3 col-lg-3 footer-links">
+                        	<h4 class="h4">Quick Shop</h4>
+                            <ul>
+                            	<li><a href="#">Women</a></li>
+                                <li><a href="#">Men</a></li>
+                                <li><a href="#">Kids</a></li>
+                                <li><a href="#">Sportswear</a></li>
+                                <li><a href="#">Sale</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-3 col-lg-3 footer-links">
+                        	<h4 class="h4">Informations</h4>
+                            <ul>
+                            	<li><a href="#">About us</a></li>
+                                <li><a href="#">Careers</a></li>
+                                <li><a href="#">Privacy policy</a></li>
+                                <li><a href="#">Terms &amp; condition</a></li>
+                                <li><a href="#">My Account</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-3 col-lg-3 footer-links">
+                        	<h4 class="h4">Customer Services</h4>
+                            <ul>
+                            	<li><a href="#">Request Personal Data</a></li>
+                                <li><a href="#">FAQ's</a></li>
+                                <li><a href="#">Contact Us</a></li>
+                                <li><a href="#">Orders and Returns</a></li>
+                                <li><a href="#">Support Center</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-3 col-lg-3 contact-box">
+                        	<h4 class="h4">Contact Us</h4>
+                            <ul class="addressFooter">
+                            	<li><i class="icon anm anm-map-marker-al"></i><p>55 Gallaxy Enque,<br>2568 steet, 23568 NY</p></li>
+                                <li class="phone"><i class="icon anm anm-phone-s"></i><p>(440) 000 000 0000</p></li>
+                                <li class="email"><i class="icon anm anm-envelope-l"></i><p>sales@yousite.com</p></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!--End Footer Links-->
+                <hr>
+                <div class="footer-bottom">
+                	<div class="row">
+                    	<!--Footer Copyright-->
+	                	<div class="col-12 col-sm-12 col-md-6 col-lg-6 order-1 order-md-0 order-lg-0 order-sm-1 copyright text-sm-center text-md-left text-lg-left"><span></span> <a href="templateshub.net">Templates Hub</a></div>
+                        <!--End Footer Copyright-->
+                        <!--Footer Payment Icon-->
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-6 order-0 order-md-1 order-lg-1 order-sm-0 payment-icons text-right text-md-center">
+                        	<ul class="payment-icons list--inline">
+                        		<li><i class="icon fa fa-cc-visa" aria-hidden="true"></i></li>
+                                <li><i class="icon fa fa-cc-mastercard" aria-hidden="true"></i></li>
+                                <li><i class="icon fa fa-cc-discover" aria-hidden="true"></i></li>
+                                <li><i class="icon fa fa-cc-paypal" aria-hidden="true"></i></li>
+                                <li><i class="icon fa fa-cc-amex" aria-hidden="true"></i></li>
+                                <li><i class="icon fa fa-credit-card" aria-hidden="true"></i></li>
+                            </ul>
+                        </div>
+                        <!--End Footer Payment Icon-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--End Footer-->
+    <!--Scoll Top-->
+    <span id="site-scroll"><i class="icon anm anm-angle-up-r"></i></span>
+    <!--End Scoll Top-->
+
+     <!-- Including Jquery -->
+     <script src="{% static 'assets/js/vendor/jquery-3.3.1.min.js'%}"></script>
+     <script src="{% static 'assets/js/vendor/jquery.cookie.js'%}"></script>
+     <script src="{% static 'assets/js/vendor/modernizr-3.6.0.min.js'%}"></script>
+     <script src="{% static 'assets/js/vendor/wow.min.js'%}"></script>
+     <!-- Including Javascript -->
+     <script src="{% static 'assets/js/bootstrap.min.js'%}"></script>
+     <script src="{% static 'assets/js/plugins.js'%}"></script>
+     <script src="{% static 'assets/js/popper.min.js'%}"></script>
+     <script src="{% static 'assets/js/lazysizes.js'%}"></script>
+     <script src="{% static 'assets/js/main.js'%}"></script>
+</div>
+</body>
+
+<!-- belle/cart-variant1.html   11 Nov 2019 12:44:32 GMT -->
+</html>

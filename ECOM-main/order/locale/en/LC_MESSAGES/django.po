@@ -1,0 +1,219 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-07-30 04:36+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: order/templates/ordercomplete.html:17
+msgid "Your order is confirmed!"
+msgstr ""
+
+#: order/templates/ordercomplete.html:18
+msgid "your order has been confirmed and will be shipped in two days"
+msgstr ""
+
+#: order/templates/ordercomplete.html:21 order/templates/orderproduct.html:356
+msgid "Address"
+msgstr ""
+
+#: order/templates/ordercomplete.html:22
+msgid "Order number"
+msgstr ""
+
+#: order/templates/ordercomplete.html:23 order/templates/orderproduct.html:370
+msgid "City"
+msgstr ""
+
+#: order/templates/ordercomplete.html:24 order/templates/orderproduct.html:366
+msgid "Country"
+msgstr ""
+
+#: order/templates/ordercomplete.html:45 order/templates/orderproduct.html:395
+#: order/templates/orderproduct.html:412 order/templates/shopcart.html:363
+msgid "Subtotal"
+msgstr ""
+
+#: order/templates/ordercomplete.html:47 order/templates/orderproduct.html:416
+#: order/templates/shopcart.html:296
+msgid "Total"
+msgstr ""
+
+#: order/templates/orderproduct.html:51 order/templates/orderproduct.html:140
+#: order/templates/shopcart.html:51 order/templates/shopcart.html:139
+msgid "Categories"
+msgstr ""
+
+#: order/templates/orderproduct.html:97 order/templates/shopcart.html:96
+msgid "Worldwide Express Shipping"
+msgstr ""
+
+#: order/templates/orderproduct.html:102 order/templates/shopcart.html:101
+msgid "Login"
+msgstr ""
+
+#: order/templates/orderproduct.html:103 order/templates/shopcart.html:102
+msgid "Create Account"
+msgstr ""
+
+#: order/templates/orderproduct.html:105 order/templates/shopcart.html:104
+msgid "My account"
+msgstr ""
+
+#: order/templates/orderproduct.html:135 order/templates/orderproduct.html:252
+#: order/templates/shopcart.html:134 order/templates/shopcart.html:251
+msgid "Home"
+msgstr ""
+
+#: order/templates/orderproduct.html:136 order/templates/orderproduct.html:253
+#: order/templates/shopcart.html:135 order/templates/shopcart.html:252
+msgid "Shop"
+msgstr ""
+
+#: order/templates/orderproduct.html:150 order/templates/orderproduct.html:151
+#: order/templates/orderproduct.html:152 order/templates/orderproduct.html:153
+#: order/templates/orderproduct.html:154 order/templates/orderproduct.html:155
+#: order/templates/orderproduct.html:156 order/templates/orderproduct.html:157
+#: order/templates/shopcart.html:149 order/templates/shopcart.html:150
+#: order/templates/shopcart.html:151 order/templates/shopcart.html:152
+#: order/templates/shopcart.html:153 order/templates/shopcart.html:154
+#: order/templates/shopcart.html:155 order/templates/shopcart.html:156
+msgid "Hot"
+msgstr ""
+
+#: order/templates/orderproduct.html:167 order/templates/orderproduct.html:266
+#: order/templates/shopcart.html:166 order/templates/shopcart.html:265
+msgid "Aboutus"
+msgstr ""
+
+#: order/templates/orderproduct.html:170 order/templates/orderproduct.html:265
+#: order/templates/shopcart.html:169 order/templates/shopcart.html:264
+msgid "Contact"
+msgstr ""
+
+#: order/templates/orderproduct.html:173 order/templates/orderproduct.html:267
+#: order/templates/shopcart.html:172 order/templates/shopcart.html:266
+msgid "FAQ"
+msgstr ""
+
+#: order/templates/orderproduct.html:209 order/templates/shopcart.html:208
+#: order/templates/shopcart.html:326
+msgid "Delete! Are you sure?"
+msgstr ""
+
+#: order/templates/orderproduct.html:231 order/templates/shopcart.html:230
+msgid "Cart Subtotal:"
+msgstr ""
+
+#: order/templates/orderproduct.html:234 order/templates/shopcart.html:233
+msgid "View Cart"
+msgstr ""
+
+#: order/templates/orderproduct.html:235 order/templates/shopcart.html:234
+msgid "Checkout"
+msgstr ""
+
+#: order/templates/orderproduct.html:250 order/templates/shopcart.html:249
+msgid "Close Menu"
+msgstr ""
+
+#: order/templates/orderproduct.html:255 order/templates/shopcart.html:254
+msgid "Category"
+msgstr ""
+
+#: order/templates/orderproduct.html:268 order/templates/shopcart.html:267
+msgid "Shopcart"
+msgstr ""
+
+#: order/templates/orderproduct.html:269 order/templates/shopcart.html:268
+msgid "My akkount"
+msgstr ""
+
+#: order/templates/orderproduct.html:290
+msgid "Returning customer?"
+msgstr ""
+
+#: order/templates/orderproduct.html:290
+msgid "Click here to login"
+msgstr ""
+
+#: order/templates/orderproduct.html:324
+msgid "Have a coupon? "
+msgstr ""
+
+#: order/templates/orderproduct.html:324
+msgid "Click here to enter your code"
+msgstr ""
+
+#: order/templates/orderproduct.html:343
+msgid "Billing details"
+msgstr ""
+
+#: order/templates/orderproduct.html:346
+msgid "First Name"
+msgstr ""
+
+#: order/templates/orderproduct.html:350
+msgid "Last Name"
+msgstr ""
+
+#: order/templates/orderproduct.html:360
+msgid "Phone"
+msgstr ""
+
+#: order/templates/orderproduct.html:375
+msgid "Place order"
+msgstr ""
+
+#: order/templates/orderproduct.html:384
+msgid "Your Order"
+msgstr ""
+
+#: order/templates/orderproduct.html:391 order/templates/shopcart.html:293
+msgid "Product"
+msgstr ""
+
+#: order/templates/orderproduct.html:392 order/templates/shopcart.html:294
+msgid "Price"
+msgstr ""
+
+#: order/templates/orderproduct.html:393 order/templates/shopcart.html:295
+msgid "Quantity"
+msgstr ""
+
+#: order/templates/orderproduct.html:394
+msgid "Amaount"
+msgstr ""
+
+#: order/templates/shopcart.html:287
+msgid "Congratulations!"
+msgstr ""
+
+#: order/templates/shopcart.html:287
+msgid "You've got free shipping!"
+msgstr ""
+
+#: order/templates/shopcart.html:359
+msgid "total"
+msgstr ""
+
+#: order/templates/shopcart.html:369
+msgid "Grand Total"
+msgstr ""
+
+#: order/templates/shopcart.html:373
+msgid "Proceed To Checkout"
+msgstr ""

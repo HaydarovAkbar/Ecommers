@@ -1,0 +1,399 @@
+{% load static %}
+{% load i18n %}
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Melody Admin</title>
+  <!-- plugins:css -->
+  <link rel="stylesheet" href="{% static 'static2/vendors/iconfonts/font-awesome/css/all.min.css'%}">
+  <link rel="stylesheet" href="{% static 'static2/vendors/css/vendor.bundle.base.css'%}">
+  <link rel="stylesheet" href="{% static 'static2/vendors/css/vendor.bundle.addons.css'%}">
+  <!-- endinject -->
+  <!-- plugin css for this page -->
+  <!-- End plugin css for this page -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="{% static 'static2/css/style.css'%}">
+  <!-- endinject -->
+  <link rel="shortcut icon" href="/" />
+</head>
+<body>
+    <div class="container-scroller">
+    <!-- partial:partials/_navbar.html -->
+    <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row default-layout-navbar">
+      <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+        <a class="navbar-brand brand-logo" href="{% url 'startapper_home'%}">
+            <img src="{% static 'static2/images/logo.svg'%}" alt="logo"/></a>
+        <a class="navbar-brand brand-logo-mini" href="{% url 'startapper_home'%}">
+            <img src="{% static 'static2/images/logo-mini.svg'%}" alt="logo"/></a>
+      </div>
+      <div class="navbar-menu-wrapper d-flex align-items-stretch">
+        <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+          <span class="fas fa-bars"></span>
+        </button>
+        <ul class="navbar-nav">
+          <li class="nav-item nav-search d-none d-md-flex">
+            <div class="nav-link">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">
+                    <i class="fas fa-search"></i>
+                  </span>
+                </div>
+                  <script>
+                      $(function()
+                         {$("#query").autocomplete({
+                          source: "/search_auto/",
+                          select: function (event, ui) { //item selected
+                          AutoCompleteSelectHandler(event, ui)
+                           },
+                          minLength: 2,
+                             });
+                         });
+
+                          function AutoCompleteSelectHandler(event, ui)
+                         {
+                            var selectedObj = ui.item;
+                          }
+                  </script>
+                  <form method="post" action="{% url 'search'%}">
+                      {% csrf_token %}
+                      <select name="catid" class="input search-categories" style="background-color: #D5D5D5;  border: none; ">
+								<option value="0"></option>
+
+                                {% for rs in category %}
+                                {% if rs.is_leaf_node %}
+                           <option value="{{ rs.id }}">{{ rs.title }}</option>
+                                {% endif %}
+                                {% if not rs.is_leaf_rs %}
+
+                                {{ children }}
+
+                                {% endif %}
+                                {% endfor %}
+                                </select>
+                <input type="text" name="query" class="form-control" placeholder="Search" aria-label="Search">
+                  </form>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <ul class="navbar-nav navbar-nav-right">
+          <li class="nav-item d-none d-lg-flex">
+            <a class="nav-link" href="{% url 'createproduct'%}">
+              <span class="btn btn-primary">{% trans '+ Create Product'%}</span>
+            </a>
+
+          </li>
+          <li class="nav-item dropdown d-none d-lg-flex">
+            <div class="nav-link">
+              <form class="form-inline" action="{% url 'selectlanguagess' %}"method="post">
+                        {% csrf_token %}
+                          <input name="next" type="hidden" value="{{ redirect_to }}">
+                            <select name="language" onchange="submit()" style=" width: 130px; height: 35px; background-color: white;">
+
+                                {% get_current_language as LANGUAGE_CODE %}
+                                {% get_available_languages as LANGUAGES %}
+                                {% get_language_info_list for LANGUAGES as languages %}
+                                {% for language in languages %}
+                                    <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected{% endif %}>
+                                        {{ language.name_local }} ({{ language.code }})
+                                    </option>
+                                {% endfor %}
+                            </select>
+                            <noscript>
+                                <input type="submit" value="Set" />
+                            </noscript>
+                        </form>
+                    </div>
+                   </li>
+            <li class="nav-item nav-profile dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
+              <img src="{{ admin.image.url }}" alt="profile"/>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
+              <a href="{% url 'user-update'%}" class="dropdown-item">
+                <i class="fas fa-cog text-primary"></i>
+                {% trans 'Settings'%}
+              </a>
+              <div class="dropdown-divider"></div>
+              <a href="{% url 'logout_form'%}" class="dropdown-item">
+                <i class="fas fa-power-off text-primary"></i>
+                {% trans 'Logout'%}
+              </a>
+            </div>
+          </li>
+          <li class="nav-item nav-settings d-none d-lg-block">
+            <a class="nav-link" href="#">
+              <i class="fas fa-ellipsis-h"></i>
+            </a>
+          </li>
+        </ul>
+        <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+          <span class="fas fa-bars"></span>
+        </button>
+      </div>
+    </nav>
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+      <!-- partial:partials/_settings-panel.html -->
+      <div class="theme-setting-wrapper">
+        <div id="settings-trigger"><i class="fas fa-fill-drip"></i></div>
+        <div id="theme-settings" class="settings-panel">
+          <i class="settings-close fa fa-times"></i>
+          <p class="settings-heading">SIDEBAR SKINS</p>
+          <div class="sidebar-bg-options selected" id="sidebar-light-theme"><div class="img-ss rounded-circle bg-light border mr-3"></div>Light</div>
+          <div class="sidebar-bg-options" id="sidebar-dark-theme"><div class="img-ss rounded-circle bg-dark border mr-3"></div>Dark</div>
+          <p class="settings-heading mt-2">HEADER SKINS</p>
+          <div class="color-tiles mx-0 px-4">
+            <div class="tiles primary"></div>
+            <div class="tiles success"></div>
+            <div class="tiles warning"></div>
+            <div class="tiles danger"></div>
+            <div class="tiles info"></div>
+            <div class="tiles dark"></div>
+            <div class="tiles default"></div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- partial -->
+      <!-- partial:partials/_sidebar.html -->
+      <nav class="sidebar sidebar-offcanvas" id="sidebar">
+        <ul class="nav">
+          <li class="nav-item nav-profile">
+            <div class="nav-link">
+              <div class="profile-image">
+                <img src="{{ admin.image.url }}" alt="image"/>
+              </div>
+              <div class="profile-name">
+                <p class="name">
+                  {{ admin.user.full_name }}
+                </p>
+                <p class="designation">
+                  Super Admin
+                </p>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'startapper_home'%}">
+              <i class="fa fa-home menu-icon"></i>
+              <span class="menu-title">{% trans 'Dashboard'%}</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'createcategory'%}">
+              <i class="fas fa-tags menu-icon"></i>
+              <span class="menu-title">{% trans 'Add Category'%}</span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'createproduct'%}">
+              <i class="fas fa-shopping-bag menu-icon"></i>
+              <span class="menu-title">{% trans 'Add Product'%}</span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'orderdetail'%}">
+              <i class="fas fa-cart-arrow-down menu-icon"></i>
+              <span class="menu-title">{% trans 'Orders'%}</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'CreatorUpdateView'%}">
+              <i class="fas fa-pen-square menu-icon"></i>
+              <span class="menu-title">{% trans 'Update'%}</span>
+            </a>
+          </li>
+
+            <li class="nav-item">
+            <a class="nav-link" href="{% url 'user-update'%}">
+              <i class="fas fa-users-cog menu-icon"></i>
+              <span class="menu-title">{% trans 'Profile'%}</span>
+            </a>
+          </li>
+
+            <li class="nav-item">
+            <a class="nav-link" href="{% url 'product_update'%}">
+              <i class="fas fa-edit menu-icon"></i>
+              <span class="menu-title">{% trans 'Product'%}</span>
+            </a>
+          </li>
+
+         <li class="nav-item">
+            <a class="nav-link" href="{% url 'category_update'%}">
+              <i class="fas fa-wrench menu-icon"></i>
+              <span class="menu-title">{% trans 'Category update'%}</span>
+            </a>
+          </li>
+
+            <li class="nav-item">
+            <a class="nav-link" href="{% url 'user_password'%}">
+              <i class="fas fa-key menu-icon"></i>
+              <span class="menu-title">{% trans 'Change password'%}</span>
+            </a>
+          </li>
+
+            <li class="nav-item">
+            <a class="nav-link" href="{% url 'comment'%}">
+              <i class="fas fa-comments menu-icon"></i>
+              <span class="menu-title">{% trans 'Comment'%}</span>
+            </a>
+          </li>
+
+             <li class="nav-item">
+            <a class="nav-link" href="{% url 'faqs'%}">
+              <i class="fas fa-info-circle menu-icon "></i>
+              <span class="menu-title">{% trans 'FAQ'%}</span>
+            </a>
+          </li>
+
+            <li class="nav-item">
+            <a class="nav-link" href="{% url 'faq_update'%}">
+              <i class="fas fa-pen-fancy menu-icon"></i>
+              <span class="menu-title ">{% trans 'FAQ Update'%}</span>
+            </a>
+          </li>
+
+        </ul>
+      </nav>
+
+      <!-- partial -->
+      <div class="main-panel">
+        <div class="content-wrapper">
+          <div class="page-header">
+            <h3 class="page-title">
+              {% trans 'Dashboard'%}
+            </h3>
+          </div>
+
+
+            <div class="col-lg-12 stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">{% trans 'Table Product'%}</h4>
+                  <p class="card-description">
+                     <code></code>
+                  </p>
+                  <div class="table-responsive">
+                    <table class="table table-bordered">
+                      <thead>
+                        <tr class="table-success">
+                            <th>
+                            N
+                          </th>
+                          <th>
+                            {% trans 'Iamge'%}
+                          </th>
+                          <th>
+                            {% trans 'Product'%}
+                          </th>
+                          <th>
+                            {% trans 'Price'%}
+                          </th>
+                          <th>
+                            {% trans 'Amount'%}
+                          </th>
+                          <th>
+                            {% trans 'Category'%}
+                          </th>
+
+                          <th>
+                            {% trans 'Edit'%}
+                          </th>
+
+                          <th>
+                            {% trans 'Delate'%}
+                          </th>
+                        </tr>
+                      </thead>
+                        <tbody>
+                      {% for rs in product %}
+                        <tr class="table-danger">
+                           <td>
+                              {{ rs.id }}
+                          </td>
+                          <td>
+                              <img src="{{ rs.image.url }}">
+                          </td>
+
+                          <td>
+                            {{ rs.title }}
+                          </td>
+                          <td>
+                            Sum = {{ rs.price }}
+                          </td>
+                          <td>
+                            {{ rs.amount }}
+                          </td>
+                          <td>
+                            {{ rs.category }}
+                          </td>
+
+                        <td>
+                            <a href="{% url 'product_edit' rs.id rs.slug %}"><i class="fas fa-edit fa-lg"></i></a>
+                          </td>
+
+                        <td>
+                            <a href="{% url 'product_delate' rs.id rs.slug%}"><i class="fas fa-trash-alt fa-lg"></i></a>
+                          </td>
+
+                        </tr>
+                         {% endfor %}
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
+
+
+
+        </div>
+        <!-- content-wrapper ends -->
+        <!-- partial:partials/_footer.html -->
+        <footer class="footer">
+          <div class="d-sm-flex justify-content-center justify-content-sm-between">
+            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2021. All rights reserved.</span>
+            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Hand-crafted & made with <i class="far fa-heart text-danger"></i></span>
+          </div>
+        </footer>
+        <!-- partial -->
+      </div>
+      <!-- main-panel ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+  </div>
+  <!-- container-scroller -->
+
+  <!-- plugins:js -->
+  <script src="{% static 'static2/vendors/js/vendor.bundle.base.js'%}"></script>
+  <script src="{% static 'static2/vendors/js/vendor.bundle.addons.js'%}"></script>
+  <!-- endinject -->
+  <!-- Plugin js for this page-->
+  <!-- End plugin js for this page-->
+  <!-- inject:js -->
+  <script src="{% static 'static2/js/off-canvas.js'%}"></script>
+  <script src="{% static 'static2/js/hoverable-collapse.js'%}"></script>
+  <script src="{% static 'static2/js/misc.js'%}"></script>
+  <script src="{% static 'static2/js/settings.js'%}"></script>
+  <script src="{% static 'static2/js/todolist.js'%}"></script>
+  <!-- endinject -->
+  <!-- Custom js for this page-->
+  <script src="{% static 'static2/js/dashboard.js'%}"></script>
+  <!-- End custom js for this page-->
+</body>
+
+
+</html>

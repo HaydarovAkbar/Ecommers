@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	<title>pagination</title>
+</head>
+<body class="contact-template page-template belle">
+{% if page.has_other_pages %}
+<ul class="pagination my-5">
+    {% if page.has_previous %}
+        <li class=""><a class="" href="?page={{ page.previous_page_number }}" style="" ><i class="fa fa-arrow-left"></i></a></li>
+    {% else %}
+      <li class=""><a class="" href="#"><i class="fa fa-arrow-left"></i>
+      </a></li>
+    {% endif %}
+    {% for i in page.paginator.page_range %}
+      {% if page.number == i %}
+        <li class=""><a class="" href="#" style="background-color: #aaaaaa; color: white; border: red">{{i}}</a></li>
+      {% else %}
+        <li class=""><a class="" href="?page={{ i }}">{{ i }}</a></li>
+      {% endif %}
+    {% endfor %}
+    {% if page.has_next %}
+      <li class=""><a class="" href="?page={{ page.next_page_number }}" style=""><i class="fa fa-arrow-right"></i></a></li>
+    {% else %}
+       <li class=""><a class="" href="#"></a></li>
+    {% endif %}
+  </ul>
+{% endif %}
+</body>
+</html>

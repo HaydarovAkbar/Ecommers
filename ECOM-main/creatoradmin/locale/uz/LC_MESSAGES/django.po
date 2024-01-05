@@ -1,0 +1,970 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-07-30 04:37+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: creatoradmin/templates/add_category.html:86
+#: creatoradmin/templates/add_product.html:85
+#: creatoradmin/templates/admin_note.html:89
+#: creatoradmin/templates/category_edit.html:88
+#: creatoradmin/templates/category_update.html:88
+#: creatoradmin/templates/comment.html:88
+#: creatoradmin/templates/faq_edit.html:88
+#: creatoradmin/templates/faq_update.html:86
+#: creatoradmin/templates/faqs.html:88 creatoradmin/templates/orderlist.html:88
+#: creatoradmin/templates/product_edit.html:88
+#: creatoradmin/templates/product_update.html:88
+#: creatoradmin/templates/search.html:88
+#: creatoradmin/templates/startapper_home.html:88
+msgid "+ Create Product"
+msgstr "+ Mahsulot Qo'shish"
+
+#: creatoradmin/templates/add_category.html:118
+#: creatoradmin/templates/add_product.html:117
+#: creatoradmin/templates/admin_note.html:121
+#: creatoradmin/templates/category_edit.html:120
+#: creatoradmin/templates/category_update.html:120
+#: creatoradmin/templates/comment.html:120
+#: creatoradmin/templates/faq_edit.html:128
+#: creatoradmin/templates/faq_update.html:119
+#: creatoradmin/templates/faqs.html:120
+#: creatoradmin/templates/orderlist.html:120
+#: creatoradmin/templates/product_edit.html:127
+#: creatoradmin/templates/product_update.html:121
+#: creatoradmin/templates/search.html:120
+#: creatoradmin/templates/startapper_home.html:127
+msgid "Settings"
+msgstr "Sozlamalar"
+
+#: creatoradmin/templates/add_category.html:123
+#: creatoradmin/templates/add_product.html:122
+#: creatoradmin/templates/admin_note.html:126
+#: creatoradmin/templates/category_edit.html:125
+#: creatoradmin/templates/category_update.html:125
+#: creatoradmin/templates/comment.html:125
+#: creatoradmin/templates/faq_edit.html:133
+#: creatoradmin/templates/faq_update.html:124
+#: creatoradmin/templates/faqs.html:125
+#: creatoradmin/templates/orderlist.html:125
+#: creatoradmin/templates/product_edit.html:132
+#: creatoradmin/templates/product_update.html:126
+#: creatoradmin/templates/search.html:125
+#: creatoradmin/templates/startapper_home.html:132
+msgid "Logout"
+msgstr "Chiqish"
+
+#: creatoradmin/templates/add_category.html:184
+#: creatoradmin/templates/add_product.html:183
+#: creatoradmin/templates/admin_note.html:187
+#: creatoradmin/templates/category_edit.html:186
+#: creatoradmin/templates/category_update.html:186
+#: creatoradmin/templates/category_update.html:271
+#: creatoradmin/templates/comment.html:186
+#: creatoradmin/templates/faq_edit.html:194
+#: creatoradmin/templates/faq_update.html:185
+#: creatoradmin/templates/faqs.html:186
+#: creatoradmin/templates/orderlist.html:186
+#: creatoradmin/templates/product_edit.html:193
+#: creatoradmin/templates/product_update.html:187
+#: creatoradmin/templates/product_update.html:274
+#: creatoradmin/templates/search.html:186
+#: creatoradmin/templates/startapper_home.html:193
+#: creatoradmin/templates/startapper_home.html:280
+msgid "Dashboard"
+msgstr "Boshqaruv paneli"
+
+#: creatoradmin/templates/add_category.html:190
+#: creatoradmin/templates/add_product.html:189
+#: creatoradmin/templates/admin_note.html:193
+#: creatoradmin/templates/category_edit.html:192
+#: creatoradmin/templates/category_update.html:192
+#: creatoradmin/templates/comment.html:192
+#: creatoradmin/templates/faq_edit.html:200
+#: creatoradmin/templates/faq_update.html:191
+#: creatoradmin/templates/faqs.html:192
+#: creatoradmin/templates/orderlist.html:192
+#: creatoradmin/templates/product_edit.html:199
+#: creatoradmin/templates/product_update.html:193
+#: creatoradmin/templates/search.html:192
+#: creatoradmin/templates/startapper_home.html:199
+msgid "Add Category"
+msgstr "Katego'rya Qo'shish"
+
+#: creatoradmin/templates/add_category.html:197
+#: creatoradmin/templates/add_product.html:196
+#: creatoradmin/templates/admin_note.html:200
+#: creatoradmin/templates/category_edit.html:199
+#: creatoradmin/templates/category_update.html:199
+#: creatoradmin/templates/comment.html:199
+#: creatoradmin/templates/faq_edit.html:207
+#: creatoradmin/templates/faq_update.html:198
+#: creatoradmin/templates/faqs.html:199
+#: creatoradmin/templates/orderlist.html:199
+#: creatoradmin/templates/product_edit.html:206
+#: creatoradmin/templates/product_update.html:200
+#: creatoradmin/templates/search.html:199
+#: creatoradmin/templates/startapper_home.html:206
+msgid "Add Product"
+msgstr "Mahsulot Qo'shish"
+
+#: creatoradmin/templates/add_category.html:204
+#: creatoradmin/templates/add_product.html:203
+#: creatoradmin/templates/admin_note.html:207
+#: creatoradmin/templates/category_edit.html:206
+#: creatoradmin/templates/category_update.html:206
+#: creatoradmin/templates/comment.html:206
+#: creatoradmin/templates/faq_edit.html:214
+#: creatoradmin/templates/faq_update.html:205
+#: creatoradmin/templates/faqs.html:206
+#: creatoradmin/templates/orderlist.html:206
+#: creatoradmin/templates/orderlist.html:285
+#: creatoradmin/templates/product_edit.html:213
+#: creatoradmin/templates/product_update.html:207
+#: creatoradmin/templates/search.html:206
+#: creatoradmin/templates/startapper_home.html:213
+msgid "Orders"
+msgstr "Zakaslar"
+
+#: creatoradmin/templates/add_category.html:210
+#: creatoradmin/templates/add_product.html:209
+#: creatoradmin/templates/admin_note.html:213
+#: creatoradmin/templates/category_edit.html:212
+#: creatoradmin/templates/category_update.html:212
+#: creatoradmin/templates/comment.html:212
+#: creatoradmin/templates/faq_edit.html:220
+#: creatoradmin/templates/faq_update.html:211
+#: creatoradmin/templates/faqs.html:212
+#: creatoradmin/templates/orderlist.html:212
+#: creatoradmin/templates/product_edit.html:219
+#: creatoradmin/templates/product_update.html:213
+#: creatoradmin/templates/search.html:212
+#: creatoradmin/templates/startapper_home.html:219
+msgid "Update"
+msgstr "Yangilash"
+
+#: creatoradmin/templates/add_category.html:217
+#: creatoradmin/templates/add_product.html:216
+#, fuzzy
+#| msgid "Update"
+msgid "Updateprofile"
+msgstr "Yangilash"
+
+#: creatoradmin/templates/add_category.html:224
+msgid "product update"
+msgstr "Tahrirlash"
+
+#: creatoradmin/templates/add_category.html:231
+#: creatoradmin/templates/add_product.html:230
+#: creatoradmin/templates/admin_note.html:234
+#: creatoradmin/templates/category_edit.html:233
+#: creatoradmin/templates/category_update.html:233
+#: creatoradmin/templates/comment.html:233
+#: creatoradmin/templates/faq_edit.html:241
+#: creatoradmin/templates/faq_update.html:232
+#: creatoradmin/templates/faqs.html:233
+#: creatoradmin/templates/orderlist.html:233
+#: creatoradmin/templates/product_edit.html:240
+#: creatoradmin/templates/product_update.html:234
+#: creatoradmin/templates/search.html:233
+#: creatoradmin/templates/startapper_home.html:240
+msgid "Category update"
+msgstr "Katego'rya Yangilash"
+
+#: creatoradmin/templates/add_category.html:238
+#: creatoradmin/templates/add_product.html:237
+#: creatoradmin/templates/admin_note.html:241
+#: creatoradmin/templates/category_edit.html:240
+#: creatoradmin/templates/category_update.html:240
+#: creatoradmin/templates/comment.html:240
+#: creatoradmin/templates/faq_edit.html:248
+#: creatoradmin/templates/faq_update.html:239
+#: creatoradmin/templates/faqs.html:240
+#: creatoradmin/templates/orderlist.html:240
+#: creatoradmin/templates/product_edit.html:247
+#: creatoradmin/templates/product_update.html:241
+#: creatoradmin/templates/search.html:240
+#: creatoradmin/templates/startapper_home.html:247
+msgid "Change password"
+msgstr "Password o'zgartirish"
+
+#: creatoradmin/templates/add_category.html:245
+#: creatoradmin/templates/add_product.html:244
+#: creatoradmin/templates/admin_note.html:247
+#: creatoradmin/templates/category_edit.html:246
+#: creatoradmin/templates/category_update.html:246
+#: creatoradmin/templates/comment.html:247
+#: creatoradmin/templates/comment.html:285
+#: creatoradmin/templates/comment.html:303
+#: creatoradmin/templates/faq_edit.html:255
+#: creatoradmin/templates/faq_update.html:246
+#: creatoradmin/templates/faqs.html:247
+#: creatoradmin/templates/orderlist.html:247
+#: creatoradmin/templates/product_edit.html:254
+#: creatoradmin/templates/product_update.html:248
+#: creatoradmin/templates/search.html:247
+#: creatoradmin/templates/startapper_home.html:254
+#: creatoradmin/templates/startapper_home.html:324
+#: creatoradmin/templates/startapper_home.html:327
+#: creatoradmin/templates/user_comments.html:453
+msgid "Comment"
+msgstr "Kamentlar"
+
+#: creatoradmin/templates/add_category.html:251
+#: creatoradmin/templates/add_product.html:251
+#: creatoradmin/templates/admin_note.html:253
+#: creatoradmin/templates/category_edit.html:253
+#: creatoradmin/templates/category_update.html:253
+#: creatoradmin/templates/comment.html:254
+#: creatoradmin/templates/faq_edit.html:262
+#: creatoradmin/templates/faq_edit.html:295
+#: creatoradmin/templates/faq_update.html:253
+#: creatoradmin/templates/faq_update.html:270
+#: creatoradmin/templates/faq_update.html:275
+#: creatoradmin/templates/faqs.html:254 creatoradmin/templates/faqs.html:288
+#: creatoradmin/templates/orderlist.html:254
+#: creatoradmin/templates/product_edit.html:261
+#: creatoradmin/templates/product_update.html:255
+#: creatoradmin/templates/profile_update.html:176
+#: creatoradmin/templates/profile_update.html:270
+#: creatoradmin/templates/profile_update_staff.html:174
+#: creatoradmin/templates/profile_update_staff.html:268
+#: creatoradmin/templates/search.html:254
+#: creatoradmin/templates/startapper_home.html:261
+#: creatoradmin/templates/user_order_product.html:174
+#: creatoradmin/templates/user_order_product.html:268
+#: creatoradmin/templates/user_order_product_detail.html:174
+#: creatoradmin/templates/user_order_product_detail.html:268
+#: creatoradmin/templates/user_update.html:175
+#: creatoradmin/templates/user_update.html:269
+msgid "FAQ"
+msgstr "KBS"
+
+#: creatoradmin/templates/add_category.html:258
+#: creatoradmin/templates/add_product.html:258
+#: creatoradmin/templates/admin_note.html:260
+#: creatoradmin/templates/category_update.html:260
+#, fuzzy
+#| msgid "FAQ Update"
+msgid "FAQ update"
+msgstr "KBS Yangilash"
+
+#: creatoradmin/templates/add_category.html:284
+#: creatoradmin/templates/add_product.html:329
+#: creatoradmin/templates/product_edit.html:340
+#: creatoradmin/templates/product_update.html:306
+#: creatoradmin/templates/profile_update.html:258
+#: creatoradmin/templates/profile_update_staff.html:256
+#: creatoradmin/templates/search.html:314
+#: creatoradmin/templates/startapper_home.html:307
+#: creatoradmin/templates/startapper_home.html:310
+#: creatoradmin/templates/startapper_home.html:362
+#: creatoradmin/templates/startapper_home.html:421
+#: creatoradmin/templates/user_order_product.html:256
+#: creatoradmin/templates/user_order_product_detail.html:256
+#: creatoradmin/templates/user_update.html:257
+msgid "Category"
+msgstr "Katego'ryalar"
+
+#: creatoradmin/templates/add_category.html:289
+#: creatoradmin/templates/add_product.html:288
+#: creatoradmin/templates/category_edit.html:290
+#: creatoradmin/templates/category_update.html:294
+#: creatoradmin/templates/product_edit.html:299
+msgid "Title"
+msgstr "Nomi"
+
+#: creatoradmin/templates/add_category.html:294
+#: creatoradmin/templates/add_product.html:293
+#: creatoradmin/templates/category_edit.html:294
+#: creatoradmin/templates/product_edit.html:304
+#, fuzzy
+#| msgid "Title"
+msgid "Title UZ"
+msgstr "Nomi UZ"
+
+#: creatoradmin/templates/add_category.html:299
+#: creatoradmin/templates/add_product.html:298
+#: creatoradmin/templates/category_edit.html:298
+#: creatoradmin/templates/product_edit.html:309
+#, fuzzy
+#| msgid "Title"
+msgid "Title EN"
+msgstr "Nomi EN"
+
+#: creatoradmin/templates/add_category.html:304
+#: creatoradmin/templates/add_product.html:303
+#: creatoradmin/templates/category_edit.html:302
+#: creatoradmin/templates/product_edit.html:314
+#, fuzzy
+#| msgid "Title"
+msgid "Title RU"
+msgstr "Nomi RU"
+
+#: creatoradmin/templates/add_category.html:311
+#: creatoradmin/templates/add_product.html:341
+#: creatoradmin/templates/category_edit.html:318
+#: creatoradmin/templates/product_edit.html:352
+#: creatoradmin/templates/search.html:311
+msgid "Image"
+msgstr "Rasim"
+
+#: creatoradmin/templates/add_category.html:316
+#: creatoradmin/templates/add_product.html:346
+#: creatoradmin/templates/category_edit.html:323
+#: creatoradmin/templates/product_edit.html:357
+msgid "Upload"
+msgstr "Yuklash"
+
+#: creatoradmin/templates/add_category.html:321
+#: creatoradmin/templates/add_product.html:335
+#: creatoradmin/templates/category_edit.html:312
+#: creatoradmin/templates/faq_edit.html:345
+#: creatoradmin/templates/faqs.html:338
+#: creatoradmin/templates/product_edit.html:346
+msgid "Status"
+msgstr "Holati"
+
+#: creatoradmin/templates/add_category.html:329
+#: creatoradmin/templates/add_product.html:325
+#: creatoradmin/templates/category_edit.html:306
+#: creatoradmin/templates/product_edit.html:336
+msgid "Title - 2"
+msgstr "Nomi -2"
+
+#: creatoradmin/templates/add_category.html:335
+#: creatoradmin/templates/add_product.html:351
+#: creatoradmin/templates/category_edit.html:328
+#: creatoradmin/templates/category_update.html:297
+#: creatoradmin/templates/product_edit.html:362
+#: creatoradmin/templates/startapper_home.html:365
+msgid "Description"
+msgstr "Ma'umotlar"
+
+#: creatoradmin/templates/add_category.html:338
+#: creatoradmin/templates/add_product.html:369
+#: creatoradmin/templates/admin_note.html:290
+#: creatoradmin/templates/category_edit.html:331
+#: creatoradmin/templates/faq_edit.html:350
+#: creatoradmin/templates/faqs.html:343
+#: creatoradmin/templates/product_edit.html:380
+msgid "Submit"
+msgstr "Tasdiqlash"
+
+#: creatoradmin/templates/add_product.html:223
+#: creatoradmin/templates/admin_note.html:227
+#: creatoradmin/templates/category_edit.html:226
+#: creatoradmin/templates/category_update.html:226
+#, fuzzy
+#| msgid "Product"
+msgid "Product Update"
+msgstr "Mahsulotlar"
+
+#: creatoradmin/templates/add_product.html:268
+#: creatoradmin/templates/add_product.html:273
+#: creatoradmin/templates/add_product.html:281
+#, fuzzy
+#| msgid "Add Product"
+msgid "Add products"
+msgstr "Mahsulot Qo'shish"
+
+#: creatoradmin/templates/add_product.html:309
+#: creatoradmin/templates/product_edit.html:320
+#: creatoradmin/templates/product_update.html:300
+#: creatoradmin/templates/search.html:317
+#: creatoradmin/templates/startapper_home.html:415
+#: creatoradmin/templates/startapper_home.html:478
+msgid "Price"
+msgstr "Narh"
+
+#: creatoradmin/templates/add_product.html:313
+#: creatoradmin/templates/product_edit.html:324
+#: creatoradmin/templates/product_update.html:303
+#: creatoradmin/templates/search.html:320
+#: creatoradmin/templates/startapper_home.html:418
+msgid "Amount"
+msgstr "Miqdor"
+
+#: creatoradmin/templates/add_product.html:317
+#: creatoradmin/templates/product_edit.html:328
+#, fuzzy
+#| msgid "Amount"
+msgid "Minimount"
+msgstr "Miqdor"
+
+#: creatoradmin/templates/add_product.html:356
+#: creatoradmin/templates/product_edit.html:367
+#, fuzzy
+#| msgid "Description"
+msgid "Description UZ"
+msgstr "Ma'umotlar UZ"
+
+#: creatoradmin/templates/add_product.html:361
+#: creatoradmin/templates/product_edit.html:372
+#, fuzzy
+#| msgid "Description"
+msgid "Description EN"
+msgstr "Ma'umotlar EN"
+
+#: creatoradmin/templates/add_product.html:366
+#: creatoradmin/templates/product_edit.html:377
+#, fuzzy
+#| msgid "Description"
+msgid "Description RU"
+msgstr "Ma'umotlar RU"
+
+#: creatoradmin/templates/admin_note.html:220
+#: creatoradmin/templates/category_edit.html:219
+#: creatoradmin/templates/category_update.html:219
+#, fuzzy
+#| msgid "Update"
+msgid "Update Profile"
+msgstr "Yangilash"
+
+#: creatoradmin/templates/admin_note.html:285
+#: creatoradmin/templates/startapper_home.html:315
+#: creatoradmin/templates/startapper_home.html:318
+msgid "Order"
+msgstr "Zakazlar"
+
+#: creatoradmin/templates/category_edit.html:260
+#: creatoradmin/templates/comment.html:261
+#: creatoradmin/templates/faq_edit.html:269
+#: creatoradmin/templates/faq_update.html:260
+#: creatoradmin/templates/faqs.html:261
+#: creatoradmin/templates/orderlist.html:261
+#: creatoradmin/templates/product_edit.html:268
+#: creatoradmin/templates/product_update.html:262
+#: creatoradmin/templates/search.html:261
+#: creatoradmin/templates/startapper_home.html:268
+msgid "FAQ Update"
+msgstr "KBS Yangilash"
+
+#: creatoradmin/templates/category_edit.html:270
+#: creatoradmin/templates/category_edit.html:275
+#: creatoradmin/templates/category_edit.html:283
+#, fuzzy
+#| msgid "Category update"
+msgid "Category Edit"
+msgstr "Katego'rya Yangilash"
+
+#: creatoradmin/templates/category_update.html:279
+#: creatoradmin/templates/startapper_home.html:347
+msgid "Table Category"
+msgstr "Katego'ryalar Jadvali"
+
+#: creatoradmin/templates/category_update.html:291
+#: creatoradmin/templates/product_update.html:294
+#: creatoradmin/templates/startapper_home.html:359
+#: creatoradmin/templates/startapper_home.html:409
+#: creatoradmin/templates/startapper_home.html:472
+msgid "Iamge"
+msgstr "Rasim"
+
+#: creatoradmin/templates/category_update.html:300
+#: creatoradmin/templates/faq_update.html:301
+#: creatoradmin/templates/product_update.html:310
+msgid "Edit"
+msgstr "Tahrirlash"
+
+#: creatoradmin/templates/category_update.html:303
+#: creatoradmin/templates/comment.html:308
+#: creatoradmin/templates/orderlist.html:315
+#: creatoradmin/templates/product_update.html:314
+msgid "Delate"
+msgstr "O'chirish"
+
+#: creatoradmin/templates/comment.html:219
+#: creatoradmin/templates/faq_edit.html:227
+#: creatoradmin/templates/faq_update.html:218
+#: creatoradmin/templates/faqs.html:219
+#: creatoradmin/templates/orderlist.html:219
+#: creatoradmin/templates/product_edit.html:226
+#: creatoradmin/templates/product_update.html:220
+#: creatoradmin/templates/search.html:219
+#: creatoradmin/templates/startapper_home.html:226
+#, fuzzy
+#| msgid "Update"
+msgid "Profile"
+msgstr "Pro'filni Yangilash"
+
+#: creatoradmin/templates/comment.html:226
+#: creatoradmin/templates/comment.html:297
+#: creatoradmin/templates/faq_edit.html:234
+#: creatoradmin/templates/faq_update.html:225
+#: creatoradmin/templates/faqs.html:226
+#: creatoradmin/templates/orderlist.html:226
+#: creatoradmin/templates/product_edit.html:233
+#: creatoradmin/templates/product_update.html:227
+#: creatoradmin/templates/product_update.html:297
+#: creatoradmin/templates/search.html:226
+#: creatoradmin/templates/startapper_home.html:233
+#: creatoradmin/templates/startapper_home.html:299
+#: creatoradmin/templates/startapper_home.html:302
+#: creatoradmin/templates/startapper_home.html:412
+#: creatoradmin/templates/startapper_home.html:475
+#: creatoradmin/templates/user_comments.html:451
+#: creatoradmin/templates/user_order_product.html:297
+msgid "Product"
+msgstr "Mahsulotlar"
+
+#: creatoradmin/templates/comment.html:277
+#, fuzzy
+#| msgid "Comment"
+msgid "Table Comment"
+msgstr "Kamentlar"
+
+#: creatoradmin/templates/comment.html:300
+msgid "Fullname"
+msgstr "To'liq ism"
+
+#: creatoradmin/templates/comment.html:306
+#: creatoradmin/templates/orderlist.html:306
+msgid "Phone"
+msgstr "Tel"
+
+#: creatoradmin/templates/faq_edit.html:300
+#: creatoradmin/templates/faqs.html:293
+#: creatoradmin/templates/orderlist.html:309
+msgid "Code"
+msgstr "Ko'd"
+
+#: creatoradmin/templates/faq_edit.html:305
+#: creatoradmin/templates/faqs.html:298
+msgid "Savollar"
+msgstr "Savol"
+
+#: creatoradmin/templates/faq_edit.html:310
+#: creatoradmin/templates/faqs.html:303
+#, fuzzy
+#| msgid "Savollar"
+msgid "Savollar UZ"
+msgstr "Savol UZ"
+
+#: creatoradmin/templates/faq_edit.html:315
+#: creatoradmin/templates/faqs.html:308
+#, fuzzy
+#| msgid "Savollar"
+msgid "Savollar EN"
+msgstr "Savol EN"
+
+#: creatoradmin/templates/faq_edit.html:320
+#: creatoradmin/templates/faqs.html:313
+#, fuzzy
+#| msgid "Savollar"
+msgid "Savollar RU"
+msgstr "Savol RU"
+
+#: creatoradmin/templates/faq_edit.html:325
+#: creatoradmin/templates/faqs.html:318
+#: creatoradmin/templates/user_order_product_detail.html:296
+msgid "Answer"
+msgstr "Javob"
+
+#: creatoradmin/templates/faq_edit.html:330
+#: creatoradmin/templates/faqs.html:323
+#, fuzzy
+#| msgid "Answer"
+msgid "Answer UZ"
+msgstr "Javob UZ"
+
+#: creatoradmin/templates/faq_edit.html:335
+#: creatoradmin/templates/faqs.html:328
+#, fuzzy
+#| msgid "Answer"
+msgid "Answer EN"
+msgstr "Javob EN"
+
+#: creatoradmin/templates/faq_edit.html:340
+#: creatoradmin/templates/faqs.html:333
+#, fuzzy
+#| msgid "Answer"
+msgid "Answer RU"
+msgstr "Javob RU"
+
+#: creatoradmin/templates/faq_update.html:302
+msgid "Delete"
+msgstr "O'chirish"
+
+#: creatoradmin/templates/login.html:105
+#: creatoradmin/templates/profile_update.html:139
+#: creatoradmin/templates/profile_update.html:256
+#: creatoradmin/templates/profile_update_staff.html:137
+#: creatoradmin/templates/profile_update_staff.html:254
+#: creatoradmin/templates/signup_form.html:108
+#: creatoradmin/templates/user_comments.html:142
+#: creatoradmin/templates/user_order_product.html:137
+#: creatoradmin/templates/user_order_product.html:254
+#: creatoradmin/templates/user_order_product_detail.html:137
+#: creatoradmin/templates/user_order_product_detail.html:254
+#: creatoradmin/templates/user_password.html:141
+#: creatoradmin/templates/user_update.html:138
+#: creatoradmin/templates/user_update.html:255
+msgid "Shop"
+msgstr "Magazin"
+
+#: creatoradmin/templates/login.html:109
+#: creatoradmin/templates/profile_update.html:54
+#: creatoradmin/templates/profile_update.html:143
+#: creatoradmin/templates/profile_update_staff.html:52
+#: creatoradmin/templates/profile_update_staff.html:141
+#: creatoradmin/templates/signup_form.html:112
+#: creatoradmin/templates/user_comments.html:53
+#: creatoradmin/templates/user_comments.html:146
+#: creatoradmin/templates/user_order_product.html:52
+#: creatoradmin/templates/user_order_product.html:141
+#: creatoradmin/templates/user_order_product_detail.html:52
+#: creatoradmin/templates/user_order_product_detail.html:141
+#: creatoradmin/templates/user_password.html:52
+#: creatoradmin/templates/user_password.html:145
+#: creatoradmin/templates/user_update.html:53
+#: creatoradmin/templates/user_update.html:142
+msgid "Categories"
+msgstr "Katego'ryalar"
+
+#: creatoradmin/templates/login.html:119 creatoradmin/templates/login.html:120
+#: creatoradmin/templates/login.html:121 creatoradmin/templates/login.html:122
+#: creatoradmin/templates/login.html:123 creatoradmin/templates/login.html:124
+#: creatoradmin/templates/login.html:125 creatoradmin/templates/login.html:126
+#: creatoradmin/templates/profile_update.html:153
+#: creatoradmin/templates/profile_update.html:154
+#: creatoradmin/templates/profile_update.html:155
+#: creatoradmin/templates/profile_update.html:156
+#: creatoradmin/templates/profile_update.html:157
+#: creatoradmin/templates/profile_update.html:158
+#: creatoradmin/templates/profile_update.html:159
+#: creatoradmin/templates/profile_update.html:160
+#: creatoradmin/templates/profile_update_staff.html:151
+#: creatoradmin/templates/profile_update_staff.html:152
+#: creatoradmin/templates/profile_update_staff.html:153
+#: creatoradmin/templates/profile_update_staff.html:154
+#: creatoradmin/templates/profile_update_staff.html:155
+#: creatoradmin/templates/profile_update_staff.html:156
+#: creatoradmin/templates/profile_update_staff.html:157
+#: creatoradmin/templates/profile_update_staff.html:158
+#: creatoradmin/templates/signup_form.html:122
+#: creatoradmin/templates/signup_form.html:123
+#: creatoradmin/templates/signup_form.html:124
+#: creatoradmin/templates/signup_form.html:125
+#: creatoradmin/templates/signup_form.html:126
+#: creatoradmin/templates/signup_form.html:127
+#: creatoradmin/templates/signup_form.html:128
+#: creatoradmin/templates/signup_form.html:129
+#: creatoradmin/templates/user_comments.html:156
+#: creatoradmin/templates/user_comments.html:157
+#: creatoradmin/templates/user_comments.html:158
+#: creatoradmin/templates/user_comments.html:159
+#: creatoradmin/templates/user_comments.html:160
+#: creatoradmin/templates/user_comments.html:161
+#: creatoradmin/templates/user_comments.html:162
+#: creatoradmin/templates/user_comments.html:163
+#: creatoradmin/templates/user_order_product.html:151
+#: creatoradmin/templates/user_order_product.html:152
+#: creatoradmin/templates/user_order_product.html:153
+#: creatoradmin/templates/user_order_product.html:154
+#: creatoradmin/templates/user_order_product.html:155
+#: creatoradmin/templates/user_order_product.html:156
+#: creatoradmin/templates/user_order_product.html:157
+#: creatoradmin/templates/user_order_product.html:158
+#: creatoradmin/templates/user_order_product_detail.html:151
+#: creatoradmin/templates/user_order_product_detail.html:152
+#: creatoradmin/templates/user_order_product_detail.html:153
+#: creatoradmin/templates/user_order_product_detail.html:154
+#: creatoradmin/templates/user_order_product_detail.html:155
+#: creatoradmin/templates/user_order_product_detail.html:156
+#: creatoradmin/templates/user_order_product_detail.html:157
+#: creatoradmin/templates/user_order_product_detail.html:158
+#: creatoradmin/templates/user_password.html:155
+#: creatoradmin/templates/user_password.html:156
+#: creatoradmin/templates/user_password.html:157
+#: creatoradmin/templates/user_password.html:158
+#: creatoradmin/templates/user_password.html:159
+#: creatoradmin/templates/user_password.html:160
+#: creatoradmin/templates/user_password.html:161
+#: creatoradmin/templates/user_password.html:162
+#: creatoradmin/templates/user_update.html:152
+#: creatoradmin/templates/user_update.html:153
+#: creatoradmin/templates/user_update.html:154
+#: creatoradmin/templates/user_update.html:155
+#: creatoradmin/templates/user_update.html:156
+#: creatoradmin/templates/user_update.html:157
+#: creatoradmin/templates/user_update.html:158
+#: creatoradmin/templates/user_update.html:159
+msgid "Hot"
+msgstr ""
+
+#: creatoradmin/templates/login.html:178
+#: creatoradmin/templates/profile_update.html:212
+#: creatoradmin/templates/profile_update_staff.html:210
+#: creatoradmin/templates/signup_form.html:181
+#: creatoradmin/templates/user_comments.html:215
+#: creatoradmin/templates/user_order_product.html:210
+#: creatoradmin/templates/user_order_product_detail.html:210
+#: creatoradmin/templates/user_password.html:214
+#: creatoradmin/templates/user_update.html:211
+msgid "Delete! Are you sure?"
+msgstr "O'chirish! Ishonchingiz komilmi?"
+
+#: creatoradmin/templates/orderlist.html:297
+#: creatoradmin/templates/startapper_home.html:602
+msgid "User"
+msgstr "Faydalanuvchilar"
+
+#: creatoradmin/templates/orderlist.html:300
+msgid "Firstname"
+msgstr "ISM"
+
+#: creatoradmin/templates/orderlist.html:303
+msgid "Lastname"
+msgstr "Familya"
+
+#: creatoradmin/templates/orderlist.html:312
+msgid "Note"
+msgstr "Tahrirlash"
+
+#: creatoradmin/templates/product_edit.html:279
+#: creatoradmin/templates/product_edit.html:292
+#, fuzzy
+#| msgid "Add Product"
+msgid "Edit Product"
+msgstr "Mahsulot Qo'shish"
+
+#: creatoradmin/templates/product_update.html:282
+#: creatoradmin/templates/startapper_home.html:397
+msgid "Table Product"
+msgstr "Mahsulotlar Jadvali"
+
+#: creatoradmin/templates/profile_update.html:100
+#: creatoradmin/templates/profile_update_staff.html:98
+#: creatoradmin/templates/user_order_product.html:98
+#: creatoradmin/templates/user_order_product_detail.html:98
+#: creatoradmin/templates/user_update.html:99
+msgid "Worldwide Express Shipping"
+msgstr ""
+
+#: creatoradmin/templates/profile_update.html:105
+#: creatoradmin/templates/profile_update_staff.html:103
+#: creatoradmin/templates/user_order_product.html:103
+#: creatoradmin/templates/user_order_product_detail.html:103
+#: creatoradmin/templates/user_update.html:104
+msgid "Login"
+msgstr ""
+
+#: creatoradmin/templates/profile_update.html:106
+#: creatoradmin/templates/profile_update_staff.html:104
+#: creatoradmin/templates/user_order_product.html:104
+#: creatoradmin/templates/user_order_product_detail.html:104
+#: creatoradmin/templates/user_update.html:105
+#, fuzzy
+#| msgid "Create at"
+msgid "Create Account"
+msgstr "Yaratilgan"
+
+#: creatoradmin/templates/profile_update.html:108
+#: creatoradmin/templates/profile_update_staff.html:106
+#: creatoradmin/templates/user_order_product.html:106
+#: creatoradmin/templates/user_order_product_detail.html:106
+#: creatoradmin/templates/user_update.html:107
+msgid "My account"
+msgstr ""
+
+#: creatoradmin/templates/profile_update.html:138
+#: creatoradmin/templates/profile_update.html:255
+#: creatoradmin/templates/profile_update_staff.html:136
+#: creatoradmin/templates/profile_update_staff.html:253
+#: creatoradmin/templates/user_order_product.html:136
+#: creatoradmin/templates/user_order_product.html:253
+#: creatoradmin/templates/user_order_product_detail.html:136
+#: creatoradmin/templates/user_order_product_detail.html:253
+#: creatoradmin/templates/user_update.html:137
+#: creatoradmin/templates/user_update.html:254
+msgid "Home"
+msgstr ""
+
+#: creatoradmin/templates/profile_update.html:170
+#: creatoradmin/templates/profile_update.html:269
+#: creatoradmin/templates/profile_update_staff.html:168
+#: creatoradmin/templates/profile_update_staff.html:267
+#: creatoradmin/templates/user_order_product.html:168
+#: creatoradmin/templates/user_order_product.html:267
+#: creatoradmin/templates/user_order_product_detail.html:168
+#: creatoradmin/templates/user_order_product_detail.html:267
+#: creatoradmin/templates/user_update.html:169
+#: creatoradmin/templates/user_update.html:268
+msgid "Aboutus"
+msgstr "Biz haqimzda"
+
+#: creatoradmin/templates/profile_update.html:173
+#: creatoradmin/templates/profile_update.html:268
+#: creatoradmin/templates/profile_update_staff.html:171
+#: creatoradmin/templates/profile_update_staff.html:266
+#: creatoradmin/templates/startapper_home.html:333
+#: creatoradmin/templates/startapper_home.html:336
+#: creatoradmin/templates/user_order_product.html:171
+#: creatoradmin/templates/user_order_product.html:266
+#: creatoradmin/templates/user_order_product_detail.html:171
+#: creatoradmin/templates/user_order_product_detail.html:266
+#: creatoradmin/templates/user_update.html:172
+#: creatoradmin/templates/user_update.html:267
+#, fuzzy
+#| msgid "contact"
+msgid "Contact"
+msgstr "Xabar"
+
+#: creatoradmin/templates/profile_update.html:237
+#: creatoradmin/templates/profile_update_staff.html:235
+#: creatoradmin/templates/user_order_product.html:235
+#: creatoradmin/templates/user_order_product_detail.html:235
+#: creatoradmin/templates/user_update.html:236
+msgid "View Cart"
+msgstr ""
+
+#: creatoradmin/templates/profile_update.html:238
+#: creatoradmin/templates/profile_update_staff.html:236
+#: creatoradmin/templates/user_order_product.html:236
+#: creatoradmin/templates/user_order_product_detail.html:236
+#: creatoradmin/templates/user_update.html:237
+msgid "Checkout"
+msgstr ""
+
+#: creatoradmin/templates/profile_update.html:271
+#: creatoradmin/templates/profile_update_staff.html:269
+#: creatoradmin/templates/user_order_product.html:269
+#: creatoradmin/templates/user_order_product_detail.html:269
+#: creatoradmin/templates/user_update.html:270
+#, fuzzy
+#| msgid "Shop"
+msgid "Shopcart"
+msgstr "Magazin"
+
+#: creatoradmin/templates/profile_update.html:272
+#: creatoradmin/templates/profile_update_staff.html:270
+#: creatoradmin/templates/user_order_product.html:270
+#: creatoradmin/templates/user_order_product_detail.html:270
+#: creatoradmin/templates/user_update.html:271
+msgid "My akkount"
+msgstr ""
+
+#: creatoradmin/templates/search.html:308
+#: creatoradmin/templates/startapper_home.html:536
+msgid "Name"
+msgstr "ISMI"
+
+#: creatoradmin/templates/startapper_home.html:291
+msgid "New users"
+msgstr "Foydalanuvchilar"
+
+#: creatoradmin/templates/startapper_home.html:294
+msgid "Users"
+msgstr "Foydalanuvchilar"
+
+#: creatoradmin/templates/startapper_home.html:460
+msgid "Table Order"
+msgstr "Zakaslar Jadvali"
+
+#: creatoradmin/templates/startapper_home.html:481
+msgid "Quantity"
+msgstr "Dona"
+
+#: creatoradmin/templates/startapper_home.html:484
+msgid "Create at"
+msgstr "Yaratilgan"
+
+#: creatoradmin/templates/startapper_home.html:523
+msgid "Table Contact Messages"
+msgstr "Jadvaldagi aloqa xabarlar"
+
+#: creatoradmin/templates/startapper_home.html:539
+msgid "Email"
+msgstr "Po'chta"
+
+#: creatoradmin/templates/startapper_home.html:542
+msgid "Subject"
+msgstr "Mavzu"
+
+#: creatoradmin/templates/startapper_home.html:545
+msgid "Messages"
+msgstr "Xabarlar"
+
+#: creatoradmin/templates/startapper_home.html:588
+msgid "Table User"
+msgstr "Foydalanuvchilar Jadvali"
+
+#: creatoradmin/templates/startapper_home.html:605
+msgid "Address"
+msgstr "Addreslar"
+
+#: creatoradmin/templates/startapper_home.html:608
+msgid "City"
+msgstr "Shaxar"
+
+#: creatoradmin/templates/startapper_home.html:611
+msgid "Country"
+msgstr "Davlat"
+
+#: creatoradmin/templates/user_comments.html:445
+#: creatoradmin/templates/user_order_product.html:291
+#: creatoradmin/templates/user_order_product_detail.html:288
+msgid "Congratulations!"
+msgstr "Tabriklaymiz!"
+
+#: creatoradmin/templates/user_comments.html:445
+#: creatoradmin/templates/user_order_product.html:291
+#: creatoradmin/templates/user_order_product_detail.html:288
+msgid "You've got free shipping!"
+msgstr "Sizda bepul yuk bor!"
+
+#: creatoradmin/templates/user_comments.html:452
+msgid "Like"
+msgstr ""
+
+#: creatoradmin/templates/user_comments.html:455
+msgid "delite"
+msgstr "O'chirish"
+
+#: creatoradmin/templates/user_comments.html:489
+msgid "Will be Delete ! Are you sure?"
+msgstr "O'chiriladi! Ishonchingiz komilmi?"
+
+#: creatoradmin/templates/user_order_product.html:298
+msgid "Total"
+msgstr "Jami"
+
+#: creatoradmin/templates/user_order_product.html:299
+msgid "STATUS"
+msgstr "HOLAT"
+
+#: creatoradmin/templates/user_order_product.html:300
+msgid "CREAT"
+msgstr ""
+
+#: creatoradmin/templates/user_order_product.html:301
+msgid "LINK"
+msgstr ""
+
+#: creatoradmin/templates/user_order_product_detail.html:295
+msgid "USER"
+msgstr "Foydalanuvchi"
+
+#: creatoradmin/templates/user_password.html:449
+msgid "Changes"
+msgstr "Tasdiqlash"
+
+#, fuzzy
+#~| msgid "+ Create Product"
+#~ msgid "+ Create product"
+#~ msgstr "+ Mahsulot Qo'shish"

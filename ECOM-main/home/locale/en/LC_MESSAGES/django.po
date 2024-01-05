@@ -1,0 +1,354 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-07-30 04:36+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: home/templates/category_detail.html:51
+#: home/templates/category_detail.html:139
+#: home/templates/category_detail.html:298 home/templates/contact.html:52
+#: home/templates/contact.html:140 home/templates/faq.html:50
+#: home/templates/faq.html:138 home/templates/index.html:50
+#: home/templates/index.html:139 home/templates/product_detail.html:51
+#: home/templates/product_detail.html:139 home/templates/searchs.html:51
+#: home/templates/searchs.html:139
+msgid "Categories"
+msgstr ""
+
+#: home/templates/category_detail.html:96 home/templates/contact.html:97
+#: home/templates/faq.html:95 home/templates/index.html:96
+#: home/templates/product_detail.html:96 home/templates/searchs.html:96
+msgid "Worldwide Express Shipping"
+msgstr ""
+
+#: home/templates/category_detail.html:101 home/templates/contact.html:102
+#: home/templates/faq.html:100 home/templates/index.html:101
+#: home/templates/product_detail.html:101 home/templates/searchs.html:101
+msgid "Login"
+msgstr ""
+
+#: home/templates/category_detail.html:102 home/templates/contact.html:103
+#: home/templates/faq.html:101 home/templates/index.html:102
+#: home/templates/product_detail.html:102 home/templates/searchs.html:102
+msgid "Create Account"
+msgstr ""
+
+#: home/templates/category_detail.html:104 home/templates/contact.html:105
+#: home/templates/faq.html:103 home/templates/index.html:104
+#: home/templates/product_detail.html:104 home/templates/searchs.html:104
+msgid "My account"
+msgstr ""
+
+#: home/templates/category_detail.html:134
+#: home/templates/category_detail.html:251 home/templates/contact.html:135
+#: home/templates/contact.html:252 home/templates/contact.html:290
+#: home/templates/faq.html:133 home/templates/faq.html:250
+#: home/templates/index.html:134 home/templates/index.html:251
+#: home/templates/product_detail.html:134
+#: home/templates/product_detail.html:251 home/templates/searchs.html:134
+#: home/templates/searchs.html:251
+msgid "Home"
+msgstr ""
+
+#: home/templates/category_detail.html:135
+#: home/templates/category_detail.html:252 home/templates/contact.html:136
+#: home/templates/contact.html:253 home/templates/faq.html:134
+#: home/templates/faq.html:251 home/templates/index.html:135
+#: home/templates/index.html:252 home/templates/product_detail.html:135
+#: home/templates/product_detail.html:252 home/templates/searchs.html:135
+#: home/templates/searchs.html:252
+msgid "Shop"
+msgstr ""
+
+#: home/templates/category_detail.html:149
+#: home/templates/category_detail.html:150
+#: home/templates/category_detail.html:151
+#: home/templates/category_detail.html:152
+#: home/templates/category_detail.html:153
+#: home/templates/category_detail.html:154
+#: home/templates/category_detail.html:155
+#: home/templates/category_detail.html:156 home/templates/contact.html:150
+#: home/templates/contact.html:151 home/templates/contact.html:152
+#: home/templates/contact.html:153 home/templates/contact.html:154
+#: home/templates/contact.html:155 home/templates/contact.html:156
+#: home/templates/contact.html:157 home/templates/faq.html:148
+#: home/templates/faq.html:149 home/templates/faq.html:150
+#: home/templates/faq.html:151 home/templates/faq.html:152
+#: home/templates/faq.html:153 home/templates/faq.html:154
+#: home/templates/faq.html:155 home/templates/index.html:149
+#: home/templates/index.html:150 home/templates/index.html:151
+#: home/templates/index.html:152 home/templates/index.html:153
+#: home/templates/index.html:154 home/templates/index.html:155
+#: home/templates/index.html:156 home/templates/product_detail.html:149
+#: home/templates/product_detail.html:150
+#: home/templates/product_detail.html:151
+#: home/templates/product_detail.html:152
+#: home/templates/product_detail.html:153
+#: home/templates/product_detail.html:154
+#: home/templates/product_detail.html:155
+#: home/templates/product_detail.html:156 home/templates/searchs.html:149
+#: home/templates/searchs.html:150 home/templates/searchs.html:151
+#: home/templates/searchs.html:152 home/templates/searchs.html:153
+#: home/templates/searchs.html:154 home/templates/searchs.html:155
+#: home/templates/searchs.html:156
+msgid "Hot"
+msgstr ""
+
+#: home/templates/category_detail.html:166
+#: home/templates/category_detail.html:265 home/templates/contact.html:167
+#: home/templates/contact.html:266 home/templates/faq.html:165
+#: home/templates/faq.html:264 home/templates/index.html:166
+#: home/templates/index.html:265 home/templates/product_detail.html:166
+#: home/templates/product_detail.html:265 home/templates/searchs.html:166
+#: home/templates/searchs.html:265
+msgid "Aboutus"
+msgstr ""
+
+#: home/templates/category_detail.html:169
+#: home/templates/category_detail.html:264 home/templates/contact.html:170
+#: home/templates/contact.html:265 home/templates/faq.html:168
+#: home/templates/faq.html:263 home/templates/index.html:169
+#: home/templates/index.html:264 home/templates/product_detail.html:169
+#: home/templates/product_detail.html:264 home/templates/searchs.html:169
+#: home/templates/searchs.html:264
+msgid "Contact"
+msgstr ""
+
+#: home/templates/category_detail.html:172
+#: home/templates/category_detail.html:266 home/templates/contact.html:173
+#: home/templates/contact.html:267 home/templates/faq.html:171
+#: home/templates/faq.html:265 home/templates/index.html:172
+#: home/templates/index.html:266 home/templates/product_detail.html:172
+#: home/templates/product_detail.html:266 home/templates/searchs.html:172
+#: home/templates/searchs.html:266
+msgid "FAQ"
+msgstr ""
+
+#: home/templates/category_detail.html:208 home/templates/contact.html:209
+#: home/templates/faq.html:207 home/templates/index.html:208
+#: home/templates/product_detail.html:208 home/templates/searchs.html:208
+msgid "Delete! Are you sure?"
+msgstr ""
+
+#: home/templates/category_detail.html:233 home/templates/contact.html:234
+#: home/templates/faq.html:232 home/templates/index.html:233
+#: home/templates/product_detail.html:233 home/templates/searchs.html:233
+msgid "View Cart"
+msgstr ""
+
+#: home/templates/category_detail.html:234 home/templates/contact.html:235
+#: home/templates/faq.html:233 home/templates/index.html:234
+#: home/templates/product_detail.html:234 home/templates/searchs.html:234
+msgid "Checkout"
+msgstr ""
+
+#: home/templates/category_detail.html:249 home/templates/contact.html:250
+#: home/templates/index.html:249 home/templates/product_detail.html:249
+#: home/templates/searchs.html:249
+msgid "Close Menu"
+msgstr ""
+
+#: home/templates/category_detail.html:254 home/templates/contact.html:255
+#: home/templates/faq.html:253 home/templates/index.html:254
+#: home/templates/product_detail.html:254 home/templates/searchs.html:254
+msgid "Category"
+msgstr ""
+
+#: home/templates/category_detail.html:267 home/templates/contact.html:268
+#: home/templates/faq.html:266 home/templates/index.html:267
+#: home/templates/product_detail.html:267 home/templates/searchs.html:267
+msgid "Shopcart"
+msgstr ""
+
+#: home/templates/category_detail.html:268 home/templates/contact.html:269
+#: home/templates/faq.html:267 home/templates/index.html:268
+#: home/templates/product_detail.html:268 home/templates/searchs.html:268
+msgid "My akkount"
+msgstr ""
+
+#: home/templates/category_detail.html:315 home/templates/searchs.html:294
+msgid "Price"
+msgstr ""
+
+#: home/templates/category_detail.html:404
+#: home/templates/product_detail.html:605
+msgid "New Products"
+msgstr ""
+
+#: home/templates/category_detail.html:495 home/templates/index.html:343
+#: home/templates/product_detail.html:369
+#: home/templates/product_detail.html:566
+#: home/templates/product_detail.html:618
+msgid "Add To Cart"
+msgstr ""
+
+#: home/templates/contact.html:231 home/templates/index.html:230
+#: home/templates/product_detail.html:230
+msgid "Cart Subtotal:"
+msgstr ""
+
+#: home/templates/faq.html:285
+msgid "Frequently Asked Questions"
+msgstr ""
+
+#: home/templates/index.html:297
+msgid "Xaridni biz bilan amalga oshiring"
+msgstr ""
+
+#: home/templates/index.html:298
+msgid "Skidka qilish muddati tugamoqda"
+msgstr ""
+
+#: home/templates/index.html:319
+msgid "New Arrivals"
+msgstr ""
+
+#: home/templates/index.html:320
+msgid "Browse the huge variety of our products"
+msgstr ""
+
+#: home/templates/index.html:436
+msgid "Latest From our Blog"
+msgstr ""
+
+#: home/templates/index.html:449
+msgid "It's all about how you wear"
+msgstr ""
+
+#: home/templates/index.html:470
+msgid "27 Days of Spring Fashion Recap"
+msgstr ""
+
+#: home/templates/index.html:477
+msgid "Read more"
+msgstr ""
+
+#: home/templates/product_detail.html:319
+msgid "Short Description"
+msgstr ""
+
+#: home/templates/product_detail.html:324
+msgid "Reviews -"
+msgstr ""
+
+#: home/templates/product_detail.html:336
+msgid "Regular price"
+msgstr ""
+
+#: home/templates/product_detail.html:406
+msgid "GETTING CLOSER! ONLY $199.00 AWAY FROM FREE SHIPPING!<"
+msgstr ""
+
+#: home/templates/product_detail.html:407
+msgid "ESTIMATED DELIVERY BETWEEN Wed. May 1 and Tue. May 7."
+msgstr ""
+
+#: home/templates/product_detail.html:408
+msgid "PEOPLE ARE LOOKING FOR THIS PRODUCT"
+msgstr ""
+
+#: home/templates/product_detail.html:418
+msgid "Secure Payments"
+msgstr ""
+
+#: home/templates/product_detail.html:418
+msgid "Pay with the world's most payment methods."
+msgstr ""
+
+#: home/templates/product_detail.html:422
+msgid "Confidence"
+msgstr ""
+
+#: home/templates/product_detail.html:422
+msgid "Protection covers your purchase and personal data."
+msgstr ""
+
+#: home/templates/product_detail.html:426
+msgid "Worldwide Delivery"
+msgstr ""
+
+#: home/templates/product_detail.html:426
+msgid "FREE &amp; fast shipping to over 200+ countries &amp; regions."
+msgstr ""
+
+#: home/templates/product_detail.html:430
+msgid "Hotline"
+msgstr ""
+
+#: home/templates/product_detail.html:430
+msgid "Talk to help line for your question on 4141 456 789, 4125 666 888"
+msgstr ""
+
+#: home/templates/product_detail.html:438
+msgid "Product Details"
+msgstr ""
+
+#: home/templates/product_detail.html:439
+#: home/templates/product_detail.html:500
+msgid "Product Reviews"
+msgstr ""
+
+#: home/templates/product_detail.html:473
+msgid "Write a review"
+msgstr ""
+
+#: home/templates/product_detail.html:477
+msgid "Name"
+msgstr ""
+
+#: home/templates/product_detail.html:481
+msgid "subject"
+msgstr ""
+
+#: home/templates/product_detail.html:488
+msgid "Rating"
+msgstr ""
+
+#: home/templates/product_detail.html:510
+msgid "You must be logged in post a review"
+msgstr ""
+
+#: home/templates/product_detail.html:550
+msgid "Related Products"
+msgstr ""
+
+#: home/templates/product_detail.html:551
+#: home/templates/product_detail.html:606
+msgid ""
+"You can stop autoplay, increase/decrease aniamtion speed and number of grid "
+"to show and products from store admin."
+msgstr ""
+
+#: home/templates/searchs.html:287
+msgid "Congratulations!"
+msgstr ""
+
+#: home/templates/searchs.html:287
+msgid "You've got free shipping!"
+msgstr ""
+
+#: home/templates/searchs.html:293
+msgid "Product"
+msgstr ""
+
+#: home/templates/searchs.html:295
+msgid "Quantity"
+msgstr ""
+
+#: home/templates/searchs.html:320
+msgid "dona"
+msgstr ""

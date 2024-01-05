@@ -1,0 +1,508 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'statice/bootstrap.min.css'%}">
+
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+
+	<!--fontawesome-->
+      <link href="{% static 'statice/fontawesome/css/all.css'%}" rel="stylesheet">
+
+      <link rel="stylesheet" href="{% static 'statice/all.css'%}">
+       <link rel="stylesheet" href="{% static 'statice/style.css'%}">
+
+
+      <link rel="stylesheet" type="text/css" href="{% static 'statice/icon/font/flaticon.css'%}">
+
+    <title></title>
+
+
+  </head>
+
+<body>
+
+<div class="outer-wrapper">
+<div class="container ">
+<div class="row">
+  <div class="col-2 col-md-1 col-lg-1 col-sm-2 p-0">
+
+  <div class="left-list d-flex justify-content-between flex-column h-100">
+
+  <div class="top-section">
+       <div class="ham-section">
+         <span class="hamburger"></span>
+      </div>
+  </div>
+
+
+   <div class="link-section">
+    <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+      <a onmousedown="bleep.play()" class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab"
+    aria-controls="v-pills-home" aria-selected="true">
+
+     <i class="flaticon-user-1"></i>
+    </a>
+
+      <a href="{% url 'user_orders_product'%}" onmousedown="bleep.play()" class="nav-link" id="v-pills-profile-tab"
+     role="tab" aria-controls="v-pills-profile" aria-selected="false"> <i class="fab fa-shopify"></i></a>
+
+
+
+      <a href="{% url 'user-update'%}" onmousedown="bleep.play()" class="nav-link" id="v-pills-profile-tab"
+     role="tab" aria-controls="v-pills-profile" aria-selected="false"> <i class="fas fa-user-edit"></i></a>
+
+      <a href="{% url 'register'%}" onmousedown="bleep.play()" class="nav-link" id="v-pills-profile-tab"
+     role="tab" aria-controls="v-pills-profile" aria-selected="false"> <i class="fas fa-user-plus"></i></a>
+
+
+
+        <a href="{% url 'user_password'%}" onmousedown="bleep.play()" class="nav-link" id="v-pills-profile-tab"
+     role="tab" aria-controls="v-pills-profile" aria-selected="false"> <i class="fas fa-user-cog"></i></a>
+
+
+        <a href="{% url 'CustomerUpdateView' %}" onmousedown="bleep.play()" class="nav-link" id="v-pills-profile-tab"
+     role="tab" aria-controls="v-pills-profile" aria-selected="false"> <i class="fas fa-images"></i></a>
+
+        <a href="{% url 'user_commentss'%}" onmousedown="bleep.play()" class="nav-link" id="v-pills-profile-tab"
+     role="tab" aria-controls="v-pills-profile" aria-selected="false"> <i class="fas fa-comments"></i></a>
+
+
+
+       <a href="{% url 'logout_form'%}" onmousedown="bleep.play()" class="nav-link" id="v-pills-profile-tab"
+     role="tab" aria-controls="v-pills-profile" aria-selected="false"> <i class="fas fa-sign-in-alt"></i></a>
+
+    </div>
+  </div>
+
+  <div class="download-section">
+      <a href="{% url 'home'%}" class="download-cv"><i class="flaticon-download-2"></i></a>
+  </div>
+
+  </div>
+  </div>
+
+  <div class="col-md-4 p-0 d-none d-md-block d-sm-none">
+     <div class="person">
+   <div class="person__avatar s-back-switch">
+     {% if user.image  %}
+       <img src="{{ user.image.url }}" style="width: 380px; height: 570px">
+       {% else %}
+     <h3>You have not image</h3>
+       {% endif %}
+     </div>
+                <div class="person__info">
+          <h2 class="person__name" style="color: black; font-size: 20px">{{ user.username }}  {{ user.last_name }}</h2>
+          <div class="person__position">
+          <span></span>
+          </div>
+          <div class="person__socials">
+          <ul class="person__socials-list">
+                  <li>
+                      <a href="">
+                      <i class="fab fa-facebook-f"></i>
+                      </a>
+                  </li>
+                  <li>
+                  <a href="">
+                  <i class="fab fa-dribbble"></i>
+                  </a>
+                  </li>
+                  <li>
+                      <a href="">
+                      <i class="fab fa-linkedin-in"></i>
+                      </a>
+                </li>
+               <li>
+                    <a href="">
+                    <i class="fab fa-behance"></i>
+                    </a>
+              </li>
+          </ul>
+          </div>
+          </div>
+          </div>
+            </div>
+
+  <div class="col-md-7 p-0 col-10 col-sm-10 " id="left-section">
+    <div class="tab-content" id="v-pills-tabContent">
+      <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+        <div class="tab-content-inner">
+            <!--
+            About
+          -->
+          <div class="content about">
+
+            <!-- title -->
+            <div class="title">{{ user.user.username }}  {{ user.user.last_name }}</div>
+
+            <!-- content -->
+            <div class="row">
+              <div class="col-md-6 col-sm-12 border-line-v">
+                <div class="text-box">
+                  <p>
+                    {{ user.bio }}
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-12 border-line-v">
+                <div class="info-list">
+                  <ul>
+                    <li><strong>Full name</strong>{{ user.user.full_name }}</li>
+                    <li><strong>Phone</strong>{{ user.user.phone }}</li>
+                    <li><strong>Email</strong>{{ user.user.email }}</li>
+                        <li><strong>address</strong> {{ user.address  }}</li>
+                      <li><strong>City</strong> {{ user.city  }}</li>
+                       <li><strong>Country</strong> {{ user.country  }}</li>
+
+                  </ul>
+                </div>
+              </div>
+              <div class="clear"></div>
+            </div>
+
+          </div>
+
+          <!--
+            Services
+          -->
+
+
+
+
+
+    </div>
+    </div>
+      <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+    <div class="tab-content-inner">
+
+                    <!--
+            Conacts Info
+          -->
+          <div class="content contacts">
+
+            <!-- title -->
+            <div class="title">Get in Touch</div>
+
+            <!-- content -->
+            <div class="row">
+              <div class="col col-d-12 col-t-12 col-m-12 border-line-v">
+                <div class="map" id="map">
+                <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.843550493076!2d77.28158571495268!3d28.63445068241708!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfde6fba6b761%3A0x2a7a7274f0564e9d!2s1WebLab%20-%20SEO%20Company%20in%20Delhi%20%7C%20Website%20Design%20Development%20Company%20in%20Laxmi%20nagar%20Delhi!5e0!3m2!1sen!2sin!4v1601981560465!5m2!1sen!2sin" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                </div>
+                <div class="info-list">
+                  <ul>
+                    <li><strong>Address . . . . .</strong> California, USA</li>
+                    <li><strong>Email . . . . .</strong> adlard@example.com</li>
+                    <li><strong>Phone . . . . .</strong> +123 654 78900</li>
+                    <li><strong>Freelance . . . . .</strong> Available</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="clear"></div>
+            </div>
+
+          </div>
+
+          <!--
+            Contact Form
+          -->
+          <div class="content contacts">
+
+            <!-- title -->
+            <div class="title">Contact Form</div>
+
+            <!-- content -->
+            <div class="row">
+              <div class="col col-d-12 col-t-12 col-m-12 border-line-v">
+                <div class="contact_form">
+                  <form id="cform" method="post">
+                    <div class="row">
+                      <div class=" col-md-6  col-sm-12">
+                        <div class="form-group">
+                          <input type="text" name="name" class="form-control" placeholder="Full Name" />
+                        </div>
+                      </div>
+                      <div class=" col-md-6 col-sm-12">
+                        <div class="form-group">
+                          <input type="text" name="email" class="form-control" placeholder="Email Address" />
+                        </div>
+                      </div>
+                      <div class=" col-md-12 col-sm-12">
+                        <div class="form-group">
+                          <textarea name="message" class="form-control" placeholder="Your Message"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="align-left">
+                      <a href="#" class="button-submit" >Send Message
+                      </a>
+                    </div>
+                  </form>
+
+                </div>
+              </div>
+              <div class="clear"></div>
+            </div>
+
+          </div>
+                      <!--
+            Contact Form close
+          -->
+
+    </div>
+    </div>
+      <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+    <div class="tab-content-inner">
+
+          <!--
+            work
+          -->
+          <div class="content work-wrap">
+
+            <!-- title -->
+            <div class="title">My Portfolio</div>
+
+            <!-- content -->
+            <div class="row service-items border-line-v">
+
+
+
+
+
+            <div class="masonry">
+  <div class="item">
+  <div class="work-box">
+           <div class="work-img">
+              <img src="{% static 'statice/img/work1.jpg'%}" class="img-fluid"/>
+         </div>
+         <div class="work-overlay d-flex align-items-center h-100">
+             <div class="text-center work-content">
+                         <h2>social media</h2>
+                         <p> I'm a paragraph. Click here to add your own text and edit me.</p>
+                     </div>
+         </div>
+      </div>
+  </div>
+
+  <div class="item">
+   <div class="work-box">
+           <div class="work-img">
+              <img src="{% static 'statice/img/work2.jpg'%}" class="img-fluid"/>
+         </div>
+         <div class="work-overlay d-flex align-items-center h-100">
+             <div class="text-center work-content">
+                    <h2>social media</h2>
+                    <p> I'm a paragraph. Click here to add your own text and edit me.</p>
+                     </div>
+         </div>
+      </div>
+  </div>
+
+  <div class="item">
+  <div class="work-box">
+           <div class="work-img">
+              <img src="{% static 'statice/img/work3.jpg'%}" class="img-fluid"/>
+         </div>
+         <div class="work-overlay d-flex align-items-center h-100">
+             <div class="text-center work-content">
+                         <h2>social media</h2>
+             <p> I'm a paragraph. Click here to add your own text and edit me.</p>
+                     </div>
+         </div>
+      </div>
+  </div>
+
+  <div class="item">
+  <div class="work-box">
+           <div class="work-img">
+              <img src="{% static 'statice/img/work4.jpg'%}" class="img-fluid"/>
+         </div>
+         <div class="work-overlay d-flex align-items-center h-100">
+             <div class="text-center work-content">
+                         <h2>social media</h2>
+             <p> I'm a paragraph. Click here to add your own text and edit me.</p>
+                     </div>
+         </div>
+      </div>
+  </div>
+
+    <div class="item">
+  <div class="work-box">
+           <div class="work-img">
+              <img src="{% static 'statice/img/work5.jpg'%}" class="img-fluid"/>
+         </div>
+         <div class="work-overlay d-flex align-items-center h-100">
+             <div class="text-center work-content">
+                         <h2>social media</h2>
+             <p> I'm a paragraph. Click here to add your own text and edit me.</p>
+                     </div>
+         </div>
+      </div>
+  </div>
+
+    <div class="item">
+  <div class="work-box">
+           <div class="work-img">
+              <img src="{% static 'statice/img/work6.jpg'%}" class="img-fluid"/>
+         </div>
+         <div class="work-overlay d-flex align-items-center h-100">
+             <div class="text-center work-content">
+                         <h2>social media</h2>
+             <p> I'm a paragraph. Click here to add your own text and edit me.</p>
+                     </div>
+         </div>
+      </div>
+  </div>
+
+
+</div>
+
+            </div>
+            <div class="clear"></div>
+
+          </div>
+        <!-------work-close----->
+
+
+
+       </div>
+    </div>
+      <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+    <div class="tab-content-inner">
+
+<!-- Blog -->
+          <div class="content blog">
+
+            <!-- title -->
+            <div class="title">
+              <span >Blog</span>
+            </div>
+
+            <!-- content -->
+            <div class="row border-line-v">
+              <!-- blog item -->
+              <div class="col-md-6 col-sm-12">
+                <div class="box-item">
+                  <div class="image">
+                    <a href="#">
+                      <img src="{% static 'statice/img/blog1.jpg'%}" alt="" class="img-fluid"/>
+
+                    </a>
+                  </div>
+                  <div class="desc">
+                    <a href="#">
+                      <span class="date">April 28, 2020</span>
+                    </a>
+                    <a href="#" class="name">By spite about do of allow</a>
+                    <div class="text">
+                      <p>Ex audire suavitate has, ei quodsi tacimates sapientem sed, pri zril ubique ut. Te cule tation munere noluisse. Enim torquatos&#8230;</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- blog item -->
+              <div class="col-md-6 col-sm-12">
+                <div class="box-item">
+                  <div class="image">
+                    <a href="#">
+                      <img src="{% static 'statice/img/blog2.jpg'%}" alt="" class="img-fluid"/>
+
+                    </a>
+                  </div>
+                  <div class="desc">
+                    <a href="#">
+                      <span class="date">April 28, 2020</span>
+                    </a>
+                    <a href="#" class="name">By spite about do of allow</a>
+                    <div class="text">
+                      <p>Ex audire suavitate has, ei quodsi tacimates sapientem sed, pri zril ubique ut. Te cule tation munere noluisse. Enim torquatos&#8230;</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- blog item -->
+              <div class="col-md-6 col-sm-12">
+                <div class="box-item">
+                  <div class="image">
+                    <a href="#">
+                      <img src="{% static 'statice/img/blog3.jpg'%}" alt="" class="img-fluid"/>
+
+                    </a>
+                  </div>
+                  <div class="desc">
+                    <a href="#">
+                      <span class="date">April 28, 2020</span>
+                    </a>
+                    <a href="#" class="name">By spite about do of allow</a>
+                    <div class="text">
+                      <p>Ex audire suavitate has, ei quodsi tacimates sapientem sed, pri zril ubique ut. Te cule tation munere noluisse. Enim torquatos&#8230;</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- blog item -->
+              <div class="col-md-6 col-sm-12">
+                <div class="box-item">
+                  <div class="image">
+                    <a href="#">
+                      <img src="{% static 'statice/img/blog4.jpg'%}" alt="" class="img-fluid"/>
+
+                    </a>
+                  </div>
+                  <div class="desc">
+                    <a href="#">
+                      <span class="date">April 28, 2020</span>
+                    </a>
+                    <a href="#" class="name">By spite about do of allow</a>
+                    <div class="text">
+                      <p>Ex audire suavitate has, ei quodsi tacimates sapientem sed, pri zril ubique ut. Te cule tation munere noluisse. Enim torquatos&#8230;</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="clear"></div>
+            </div>
+
+
+          </div>
+          <!-------blogs-content-close---->
+       </div>
+    </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+    <script src="{% static 'statice/slim.min.js'%}"></script>
+    <script src="{% static 'statice/puper.min.js'%}"></script>
+    <script src="{% static 'statice/bootstrap.min.js'%}" ></script>
+
+      <script src="{% static 'statice/jquery.js'%}" ></script>
+
+<script>
+var bleep = new Audio();
+bleep.src = '{% static 'statice/sound/click.mp3'%}';
+</script>
+
+
+
+  </body>
+</html>
